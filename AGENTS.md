@@ -57,6 +57,12 @@ pnpm prod:deploy    # build + rsync + docker restart (ask first)
 - Default design direction: **Modern SaaS** (neutral palette, one accent, 8 px grid, generous white space).
 - Override direction only when user explicitly requests a different style preset.
 
+## Copy Rules
+- No em dashes (`—`) anywhere in site copy. Rewrite sentences to avoid them (use a comma, colon, or split into two sentences).
+- No emoji anywhere on the site.
+- Contact email: `michael@disteladvisory.com`.
+- Use `|` as the title separator in `<title>` tags.
+
 ## Change Rules
 - Keep UI changes intentional and consistent with the existing design system.
 - Avoid broad refactors unless asked.

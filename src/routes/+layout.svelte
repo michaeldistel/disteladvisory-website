@@ -1,6 +1,77 @@
 <script lang="ts">
 	import '../app.css';
 	let { children } = $props();
+
+	const nav = [
+		{ href: '/ai-transformation', label: 'AI Transformation' },
+		{ href: '/fractional-cto', label: 'Fractional CTO' },
+		{ href: '/technical-advisory', label: 'Technical Advisory' }
+	];
 </script>
 
-{@render children()}
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:shadow-lg">
+	Skip to content
+</a>
+
+<header class="sticky top-0 z-40 border-b border-(--color-border) bg-white/95 backdrop-blur-sm">
+	<div class="mx-auto max-w-5xl px-6">
+		<!-- Row 1: logo + CTA -->
+		<div class="flex items-center justify-between py-4">
+			<a href="/" class="text-base font-semibold tracking-tight text-(--color-ink) hover:text-(--color-accent) transition-colors">
+				Distel Advisory
+			</a>
+			<a
+				href="/book"
+				class="rounded-md bg-(--color-accent) px-4 py-2 text-sm font-medium text-white hover:bg-(--color-accent-hover) transition-colors"
+			>
+				Book a call
+			</a>
+		</div>
+		<!-- Row 2: service links (mobile only) -->
+		<nav aria-label="Main navigation" class="sm:hidden border-t border-(--color-border)">
+			<ul class="flex overflow-x-auto py-2 gap-0 scrollbar-none">
+				{#each nav as item}
+					<li class="shrink-0">
+						<a
+							href={item.href}
+							class="block rounded-md px-2.5 py-1.5 text-xs font-medium text-(--color-ink-muted) hover:bg-(--color-surface-subtle) hover:text-(--color-ink) transition-colors whitespace-nowrap"
+						>
+							{item.label}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</nav>
+		<!-- Desktop: single row with service links inline -->
+		<nav aria-label="Main navigation" class="hidden sm:block absolute top-0 left-1/2 -translate-x-1/2 h-full">
+			<ul class="flex items-center h-full gap-6">
+				{#each nav as item}
+					<li>
+						<a
+							href={item.href}
+							class="text-sm text-(--color-ink-muted) hover:text-(--color-ink) transition-colors"
+						>
+							{item.label}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main id="main">
+	{@render children()}
+</main>
+
+<footer class="mt-10 border-t border-(--color-border) sm:mt-16">
+	<div class="mx-auto max-w-5xl px-6 py-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+		<p class="text-sm text-(--color-ink-muted)">
+			© {new Date().getFullYear()} Distel Advisory. All rights reserved.
+		</p>
+		<ul class="flex gap-5 text-sm text-(--color-ink-muted)">
+			<li><a href="/privacy" class="hover:text-(--color-ink) transition-colors">Privacy</a></li>
+			<li><a href="/cookies" class="hover:text-(--color-ink) transition-colors">Cookies</a></li>
+		</ul>
+	</div>
+</footer>
