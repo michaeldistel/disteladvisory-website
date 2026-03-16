@@ -1,0 +1,17 @@
+node_modules/
+.svelte-kit/
+src/
+scripts/
+nginx/
+.git/
+.gitignore
+*.md
+deno.json
+deno.lock
+package.json
+tsconfig.json
+vite.config.ts
+svelte.config.js
+postcss.config.js
+.prettierrc
+.prettierignore

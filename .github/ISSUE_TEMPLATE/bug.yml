@@ -1,0 +1,20 @@
+name: Bug
+description: Something is broken
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What is broken
+      description: Be specific. Add screenshots or URLs if helpful.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "Add label: `Priority: <p0|p1|p2|p3>`"

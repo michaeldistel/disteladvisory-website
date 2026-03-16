@@ -1,0 +1,46 @@
+name: disteladvisory-website
+
+networks:
+  proxy:
+    external: true
+
+services:
+  disteladvisory-website:
+    container_name: disteladvisory-website
+    image: nginx:alpine
+    restart: always
+    networks:
+      - proxy
+      - default
+    deploy:
+      resources:
+        limits:
+          cpus: '0.10'
+          memory: 100M
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - ./build:/usr/share/nginx/html:ro
+      - ./nginx:/etc/nginx/conf.d:ro
+    command: /bin/sh -c "nginx -t && nginx -g 'daemon off;'"
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost/nginx-health']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.docker.network=proxy'
+      - 'traefik.http.routers.disteladvisory-website.rule=Host(`disteladvisory.com`)'
+      - 'traefik.http.routers.disteladvisory-website.entrypoints=websecure'
+      - 'traefik.http.routers.disteladvisory-website.tls=true'
+      - 'traefik.http.routers.disteladvisory-website.tls.certresolver=myresolver'
+      - 'traefik.http.services.disteladvisory-website.loadbalancer.server.port=80'
+      - 'traefik.http.routers.disteladvisory-website-www.rule=Host(`www.disteladvisory.com`)'
+      - 'traefik.http.routers.disteladvisory-website-www.entrypoints=websecure'
+      - 'traefik.http.routers.disteladvisory-website-www.tls=true'
+      - 'traefik.http.routers.disteladvisory-website-www.tls.certresolver=myresolver'
+      - 'traefik.http.middlewares.www-redirect-disteladvisory-website.redirectregex.regex=^https://www\.disteladvisory\.com/(.*)'
+      - 'traefik.http.middlewares.www-redirect-disteladvisory-website.redirectregex.replacement=https://disteladvisory.com/$${1}'
+      - 'traefik.http.middlewares.www-redirect-disteladvisory-website.redirectregex.permanent=true'
+      - 'traefik.http.routers.disteladvisory-website-www.middlewares=www-redirect-disteladvisory-website'

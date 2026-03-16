@@ -1,0 +1,10 @@
+name: Idea
+description: Rough idea, not yet a feature request
+labels: [idea]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: The idea
+    validations:
+      required: true

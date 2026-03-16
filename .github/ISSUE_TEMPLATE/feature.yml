@@ -1,0 +1,14 @@
+name: Feature
+description: New functionality request
+labels: [enhancement]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What and why
+      description: Describe the feature and the problem it solves.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "Add label: `Priority: <p0|p1|p2|p3>`"
