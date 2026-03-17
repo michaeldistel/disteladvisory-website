@@ -1,6 +1,10 @@
 <script lang="ts">
+	import { GTM_CONTAINER_ID } from '$lib/site-config';
+
 	import '../app.css';
 	let { children } = $props();
+
+	const gtmContainerId = GTM_CONTAINER_ID?.trim();
 
 	const nav = [
 		{ href: '/ai-transformation', label: 'AI Transformation' },
@@ -8,6 +12,35 @@
 		{ href: '/technical-advisory', label: 'Technical Advisory' }
 	];
 </script>
+
+<svelte:head>
+	{#if gtmContainerId}
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			window.dataLayer.push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+		</script>
+		<script async src={`https://www.googletagmanager.com/gtm.js?id=${gtmContainerId}`}></script>
+	{:else}
+		<script>
+			console.error('Missing GTM_CONTAINER_ID in site config. GTM is required.');
+		</script>
+	{/if}
+</svelte:head>
+
+{#if gtmContainerId}
+	<noscript>
+		<iframe
+			src={`https://www.googletagmanager.com/ns.html?id=${gtmContainerId}`}
+			height="0"
+			width="0"
+			style="display:none;visibility:hidden"
+			title=""
+		></iframe>
+	</noscript>
+{/if}
 
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:shadow-lg">
 	Skip to content

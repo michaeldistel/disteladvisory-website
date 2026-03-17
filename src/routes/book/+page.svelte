@@ -57,8 +57,16 @@
 	function submit(e: Event) {
 		e.preventDefault();
 		if (validate()) {
+			const w = window as Window & { dataLayer?: Array<Record<string, unknown>> };
+			w.dataLayer = w.dataLayer || [];
+			w.dataLayer.push({
+				event: 'form_submit',
+				meeting_type: meetingType,
+				page_path: window.location.pathname
+			});
 			step = 'calendar';
 			syncUrlFromState(true);
+			window.open(calendarUrl, '_blank', 'noopener,noreferrer');
 		}
 	}
 
@@ -195,21 +203,21 @@
 
 	{:else}
 		<div class="mb-8">
-			<h1 class="text-3xl font-bold text-(--color-ink)">Pick a time</h1>
+			<h1 class="text-3xl font-bold text-(--color-ink)">Open calendar</h1>
 			<p class="mt-2 text-base text-(--color-ink-muted)">
-				{meetingType === 'inperson' ? 'Choose a slot for a coffee meeting in Singapore.' : 'Choose a 60-minute slot that works for you.'}
+				{meetingType === 'inperson'
+					? 'Your booking page opened in a new tab. If it did not open, use the button below.'
+					: 'Your booking page opened in a new tab. If it did not open, use the button below.'}
 			</p>
 		</div>
-		<div class="overflow-hidden rounded-xl border border-(--color-border)">
-			<iframe
-				src={calendarUrl}
-				title="Schedule a meeting with Michael Distel"
-				width="100%"
-				height="660"
-				frameborder="0"
-				class="block"
-			></iframe>
-		</div>
+		<a
+			href={calendarUrl}
+			target="_blank"
+			rel="noopener noreferrer"
+			class="inline-block rounded-md bg-(--color-accent) px-6 py-3 text-sm font-medium text-white hover:bg-(--color-accent-hover) transition-colors"
+		>
+			Open scheduling page
+		</a>
 		<button
 			onclick={() => {
 				step = 'form';

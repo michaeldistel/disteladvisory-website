@@ -25,3 +25,7 @@ pnpm lint       # lint check
 ```sh
 pnpm prod:deploy   # build + rsync + docker restart
 ```
+
+## Tracking config
+
+GTM container ID is repo-configured in `src/lib/site-config.ts`.

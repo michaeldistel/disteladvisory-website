@@ -8,3 +8,4 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ### Added
 - Initial project scaffold
+- GA4, Google Ads, LinkedIn Insight Tag, Meta Pixel install hooks via public env vars
