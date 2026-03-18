@@ -1,6 +1,6 @@
 <svelte:head>
 	<title>Fractional CTO | Distel Advisory</title>
-	<meta name="description" content="Part-time CTO leadership for early-stage startups in Southeast Asia. Architecture, engineering team oversight, hiring, and delivery accountability." />
+	<meta name="description" content="Part-time CTO leadership for growing SMEs, mid-sized businesses, and selected startups. Architecture, engineering team oversight, hiring, and delivery accountability." />
 </svelte:head>
 
 <!-- Hero -->
@@ -9,7 +9,7 @@
 		<p class="mb-4 text-sm font-medium uppercase tracking-widest text-(--color-accent)">Service</p>
 		<h1 class="text-4xl font-bold leading-tight text-(--color-ink) sm:text-5xl">Fractional CTO</h1>
 		<p class="mt-6 text-lg leading-relaxed text-(--color-ink-muted)">
-			Embedded technical leadership, typically 1 to 3 days per week, giving your startup the strategic and operational depth of a full-time CTO without the cost or commitment.
+			Embedded technical leadership, typically 1 to 3 days per week, giving your business the strategic and operational depth of a full-time CTO without the cost or commitment.
 		</p>
 	</div>
 </section>
@@ -40,10 +40,10 @@
 		<h2 class="mb-6 text-2xl font-bold text-(--color-ink)">Who it's for</h2>
 		<ul class="space-y-3 text-base text-(--color-ink-muted)">
 			{#each [
-				'Non-technical founders who need a trusted technical partner from day one',
-				'Seed to Series A startups with a small or no in-house engineering team',
+				'SME and mid-sized leadership teams that need senior technical ownership without a full-time CTO hire',
+				'Companies with a small engineering team that need stronger architecture and delivery discipline',
 				'Companies that have outgrown an agency but aren\'t ready to hire full-time',
-				'Founders preparing for a fundraising round who need technical credibility'
+				'Founder-led startups that need technical credibility and practical execution support'
 			] as point}
 				<li class="flex items-start gap-3">
 					<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-(--color-accent)"></span>
@@ -74,7 +74,7 @@
 	<div class="mx-auto max-w-5xl px-6 py-8 sm:py-14">
 		<div class="max-w-xl">
 			<h2 class="mb-3 text-2xl font-bold text-(--color-ink)">Ready to talk?</h2>
-			<p class="mb-8 text-base text-(--color-ink-muted)">Book a free 60-minute intro call. No pitch, no pressure. Just a conversation about where you are and whether I can help.</p>
+			<p class="mb-8 text-base text-(--color-ink-muted)">Book a 60-minute intro call. No pitch, no pressure. Just a conversation about where you are and whether I can help.</p>
 			<a href="/book" class="rounded-md bg-(--color-accent) px-6 py-3 text-sm font-medium text-white hover:bg-(--color-accent-hover) transition-colors">
 				Book a call
 			</a>

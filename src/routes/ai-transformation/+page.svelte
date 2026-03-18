@@ -1,6 +1,6 @@
 <svelte:head>
 	<title>AI Transformation | Distel Advisory</title>
-	<meta name="description" content="Practical AI adoption for SMEs and mid-size businesses. Cut through the hype, identify where AI actually saves time, and build workflows your team will use." />
+	<meta name="description" content="Practical AI adoption for SMEs and mid-sized businesses. Cut through the hype, identify where AI actually saves time, and build workflows your team will use." />
 </svelte:head>
 
 <!-- Hero -->
@@ -9,7 +9,7 @@
 		<p class="mb-4 text-sm font-medium uppercase tracking-widest text-(--color-accent)">Service</p>
 		<h1 class="text-4xl font-bold leading-tight text-(--color-ink) sm:text-5xl">AI Transformation</h1>
 		<p class="mt-6 text-lg leading-relaxed text-(--color-ink-muted)">
-			Most businesses waste months chasing AI projects that don't deliver. I help SMEs and mid-size companies cut through the hype, identify where AI genuinely moves the needle, and put workflows in place that stick.
+			Most businesses waste months chasing AI projects that don't deliver. I help SMEs and mid-sized companies cut through the hype, identify where AI genuinely moves the needle, and put workflows in place that stick.
 		</p>
 	</div>
 </section>
@@ -41,7 +41,7 @@
 		<ul class="space-y-3 text-base text-(--color-ink-muted)">
 			{#each [
 				'Leadership teams and business owners who know AI matters but don\'t know where to start',
-				'SMEs and mid-size businesses looking to reduce manual, repetitive work',
+				'SMEs and mid-sized businesses looking to reduce manual, repetitive work',
 				'Companies that have tried AI tools and got nothing useful out of them',
 				'Teams that want to move faster without adding headcount'
 			] as point}
@@ -60,7 +60,7 @@
 		<div class="max-w-2xl">
 			<h2 class="mb-6 text-2xl font-bold text-(--color-ink)">An honest take on AI</h2>
 			<p class="mb-4 text-base leading-relaxed text-(--color-ink-muted)">
-				AI is genuinely useful, but not for everything, and not without effort. The founders who get real value from it are the ones who pick specific, boring problems and apply AI consistently, rather than chasing the flashiest demo.
+				AI is genuinely useful, but not for everything, and not without effort. The teams that get real value are the ones who pick specific, boring problems and apply AI consistently, rather than chasing the flashiest demo.
 			</p>
 			<p class="text-base leading-relaxed text-(--color-ink-muted)">
 				My approach is practical, not evangelical. I'll tell you where AI is a good fit, where it isn't, and what to do instead. The goal is workflows your team actually uses six months from now, not a slide deck about transformation.
@@ -74,7 +74,7 @@
 	<div class="mx-auto max-w-5xl px-6 py-8 sm:py-14">
 		<div class="max-w-xl">
 			<h2 class="mb-3 text-2xl font-bold text-(--color-ink)">Let's find what's worth doing</h2>
-			<p class="mb-8 text-base text-(--color-ink-muted)">Book a free 60-minute call. Bring a specific problem or just a vague sense that you're leaving time on the table. Either works.</p>
+			<p class="mb-8 text-base text-(--color-ink-muted)">Book a 60-minute call. Bring a specific problem or just a vague sense that you're leaving time on the table. Either works.</p>
 			<a href="/book" class="rounded-md bg-(--color-accent) px-6 py-3 text-sm font-medium text-white hover:bg-(--color-accent-hover) transition-colors">
 				Book a call
 			</a>

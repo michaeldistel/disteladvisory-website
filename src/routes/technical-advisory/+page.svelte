@@ -1,6 +1,6 @@
 <svelte:head>
 	<title>Technical Advisory | Distel Advisory</title>
-	<meta name="description" content="Strategic technical guidance for founders facing a specific decision: architecture reviews, vendor evaluation, and hiring support from a former VC and startup CTO." />
+	<meta name="description" content="Strategic technical guidance for SME and mid-sized leadership teams facing specific decisions: architecture reviews, vendor evaluation, and hiring support from a former VC and startup CTO." />
 </svelte:head>
 
 <!-- Hero -->
@@ -9,7 +9,7 @@
 		<p class="mb-4 text-sm font-medium uppercase tracking-widest text-(--color-accent)">Service</p>
 		<h1 class="text-4xl font-bold leading-tight text-(--color-ink) sm:text-5xl">Technical Advisory</h1>
 		<p class="mt-6 text-lg leading-relaxed text-(--color-ink-muted)">
-			A trusted technical voice when you need it, with no long-term engagement required. Ideal for founders at a specific inflection point who want expert guidance and a second opinion.
+			A trusted technical voice when you need it, with no long-term engagement required. Ideal for SME and mid-sized leadership teams at a specific inflection point who want expert guidance and a second opinion.
 		</p>
 	</div>
 </section>
@@ -40,10 +40,10 @@
 		<h2 class="mb-6 text-2xl font-bold text-(--color-ink)">Who it's for</h2>
 		<ul class="space-y-3 text-base text-(--color-ink-muted)">
 			{#each [
-				'Founders facing a critical technical decision or inflection point',
+				'Leadership teams facing a critical technical decision or inflection point',
 				'Companies evaluating a new platform, vendor, or architectural change',
 				'Teams looking for a second opinion before a major technical investment',
-				'Investors who need honest technical due diligence on a portfolio company'
+				'Founders and investors who need honest technical due diligence on a company'
 			] as point}
 				<li class="flex items-start gap-3">
 					<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-(--color-accent)"></span>
@@ -74,7 +74,7 @@
 	<div class="mx-auto max-w-5xl px-6 py-8 sm:py-14">
 		<div class="max-w-xl">
 			<h2 class="mb-3 text-2xl font-bold text-(--color-ink)">Let's talk through it</h2>
-			<p class="mb-8 text-base text-(--color-ink-muted)">Book a free 60-minute intro call. Tell me what you're working through and we'll figure out together if advisory is the right fit.</p>
+			<p class="mb-8 text-base text-(--color-ink-muted)">Book a 60-minute intro call. Tell me what you're working through and we'll figure out together if advisory is the right fit.</p>
 			<a href="/book" class="rounded-md bg-(--color-accent) px-6 py-3 text-sm font-medium text-white hover:bg-(--color-accent-hover) transition-colors">
 				Book a call
 			</a>
