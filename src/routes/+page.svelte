@@ -171,14 +171,6 @@
 			>
 				Book a call
 			</a>
-			<a
-				href="https://calendar.google.com/appointments/schedules/AcZssZ07NTRWYmu_u0S81u-W6iMT1oyyARSR5uLkaBXeRr-gekqR39qI2WGl4PHH08TFd0C9PMeDzrIJ"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="mt-4 block text-sm text-(--color-ink-muted) hover:text-(--color-ink) transition-colors"
-			>
-				Or go straight to my calendar →
-			</a>
 		</div>
 	</div>
 </section>
