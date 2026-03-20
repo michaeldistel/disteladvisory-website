@@ -6,12 +6,16 @@
 	/>
 </svelte:head>
 
-<!-- Hero -->
+<!-- Hero: base surface -->
 <section class="mx-auto max-w-5xl px-6 pb-6 pt-8 sm:pb-12 sm:pt-14">
 	<div class="max-w-2xl">
-		<p class="mb-3 text-sm font-medium uppercase tracking-widest text-(--color-accent)">
+		<!-- Advisory Chip -->
+		<span
+			class="mb-4 inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-widest"
+			style="background-color: var(--color-primary-fixed); color: var(--color-on-primary-fixed);"
+		>
 			AI Transformation · Fractional CTO · Technical Advisory
-		</p>
+		</span>
 		<h1 class="text-4xl font-bold leading-tight text-(--color-ink) sm:text-5xl lg:text-6xl">
 			Turn AI from idea into daily workflow, without disrupting the business.
 		</h1>
@@ -23,7 +27,8 @@
 		<div class="mt-8">
 			<a
 				href="/ai-transformation"
-				class="inline-block w-full rounded-md bg-(--color-accent) px-8 py-4 text-center text-base font-semibold text-white hover:bg-(--color-accent-hover) transition-colors sm:w-auto"
+				class="inline-block w-full rounded-md px-8 py-4 text-center text-base font-semibold text-white transition-colors sm:w-auto"
+				style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));"
 			>
 				Explore AI transformation
 			</a>
@@ -34,22 +39,24 @@
 	</div>
 </section>
 
-<!-- Services -->
-<section class="border-t border-(--color-border) bg-(--color-surface-subtle)">
+<!-- Services: surface-container-low shift (no border) -->
+<section class="bg-(--color-surface-container-low)">
 	<div class="mx-auto max-w-5xl px-6 py-8 sm:py-14">
 		<h2 class="mb-6 text-2xl font-bold text-(--color-ink)">How I can help</h2>
 		<div class="grid gap-3 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+			<!-- Featured card: primary tint, no border -->
 			<a
 				href="/ai-transformation"
-				class="group rounded-xl border-2 border-(--color-accent) bg-white p-6 transition-colors hover:bg-(--color-surface-subtle)"
+				class="group rounded-xl p-6 transition-colors bg-(--color-surface-container-lowest) hover:bg-white"
 			>
-				<p
-					class="mb-2 inline-block rounded-full bg-(--color-surface-subtle) px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-(--color-accent)"
+				<span
+					class="mb-3 inline-block rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wide"
+					style="background-color: var(--color-primary-fixed); color: var(--color-on-primary-fixed);"
 				>
 					Primary focus
-				</p>
+				</span>
 				<h3
-					class="mb-2 text-lg font-semibold text-(--color-ink) group-hover:text-(--color-accent) transition-colors"
+					class="mb-2 text-lg font-semibold text-(--color-ink) group-hover:text-(--color-primary) transition-colors"
 				>
 					AI Transformation
 				</h3>
@@ -57,16 +64,16 @@
 					Practical AI adoption for SMEs and mid-sized businesses. Cut through hype, identify
 					time-saving use cases, and implement workflows teams use every week.
 				</p>
-				<span class="mt-4 inline-block text-sm font-medium text-(--color-accent)"
+				<span class="mt-4 inline-block text-sm font-medium text-(--color-primary)"
 					>See AI approach →</span
 				>
 			</a>
 			<a
 				href="/fractional-cto"
-				class="group rounded-xl border border-(--color-border) bg-white p-6 hover:border-(--color-accent) transition-colors"
+				class="group rounded-xl p-6 bg-(--color-surface-container-lowest) hover:bg-white transition-colors"
 			>
 				<h3
-					class="mb-2 text-lg font-semibold text-(--color-ink) group-hover:text-(--color-accent) transition-colors"
+					class="mb-2 text-lg font-semibold text-(--color-ink) group-hover:text-(--color-primary) transition-colors"
 				>
 					Fractional CTO
 				</h3>
@@ -74,15 +81,16 @@
 					Embedded part-time CTO leadership for growing SMEs, mid-sized businesses, and selected
 					startups. Covers architecture, engineering team oversight, hiring, and delivery.
 				</p>
-				<span class="mt-4 inline-block text-sm font-medium text-(--color-accent)">Learn more →</span
+				<span class="mt-4 inline-block text-sm font-medium text-(--color-primary)"
+					>Learn more →</span
 				>
 			</a>
 			<a
 				href="/technical-advisory"
-				class="group rounded-xl border border-(--color-border) bg-white p-6 hover:border-(--color-accent) transition-colors"
+				class="group rounded-xl p-6 bg-(--color-surface-container-lowest) hover:bg-white transition-colors"
 			>
 				<h3
-					class="mb-2 text-lg font-semibold text-(--color-ink) group-hover:text-(--color-accent) transition-colors"
+					class="mb-2 text-lg font-semibold text-(--color-ink) group-hover:text-(--color-primary) transition-colors"
 				>
 					Technical Advisory
 				</h3>
@@ -90,14 +98,15 @@
 					Strategic guidance on specific technical decisions: architecture reviews, vendor
 					evaluation, and hiring support. No long-term commitment required.
 				</p>
-				<span class="mt-4 inline-block text-sm font-medium text-(--color-accent)">Learn more →</span
+				<span class="mt-4 inline-block text-sm font-medium text-(--color-primary)"
+					>Learn more →</span
 				>
 			</a>
 		</div>
 	</div>
 </section>
 
-<!-- About -->
+<!-- About: back to base surface -->
 <section class="mx-auto max-w-5xl px-6 pt-6 pb-8 sm:py-14">
 	<div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-14">
 		<!-- Photo -->
@@ -133,7 +142,8 @@
 			</div>
 			<a
 				href="/book"
-				class="mt-6 inline-block rounded-md bg-(--color-accent) px-6 py-3 text-sm font-medium text-white hover:bg-(--color-accent-hover) transition-colors"
+				class="mt-6 inline-block rounded-md px-6 py-3 text-sm font-medium text-white transition-colors"
+				style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));"
 			>
 				Book a call
 			</a>
@@ -141,8 +151,8 @@
 	</div>
 </section>
 
-<!-- CTA -->
-<section class="border-t border-(--color-border) bg-(--color-surface-subtle)">
+<!-- CTA: surface-container-low shift (no border) -->
+<section class="bg-(--color-surface-container-low)">
 	<div class="mx-auto max-w-5xl px-6 py-8 sm:py-14">
 		<div class="max-w-2xl">
 			<h2 class="mb-4 text-2xl font-bold text-(--color-ink)">Let's talk: over coffee or a call</h2>
@@ -156,7 +166,8 @@
 			</p>
 			<a
 				href="/book"
-				class="inline-block w-full rounded-md bg-(--color-accent) px-6 py-4 text-center text-sm font-semibold text-white hover:bg-(--color-accent-hover) transition-colors sm:w-auto sm:py-3"
+				class="inline-block w-full rounded-md px-6 py-4 text-center text-sm font-semibold text-white transition-colors sm:w-auto sm:py-3"
+				style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));"
 			>
 				Book a call
 			</a>

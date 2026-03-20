@@ -67,6 +67,13 @@ pnpm prod:deploy    # build + rsync + docker restart (ask first)
 - Follow its anti-pattern list: no rainbow badges, no placeholder-only fields, no equal-weight buttons, etc.
 - Default design direction: **Modern SaaS** (neutral palette, one accent, 8 px grid, generous white space).
 - Override direction only when user explicitly requests a different style preset.
+- All visual decisions must also conform to **`DESIGN.md`** (project design system). Key rules:
+  - Use the defined color tokens (`primary` #0043aa, `primary-container` #1d5bd1, surface tiers).
+  - No 1px solid borders to separate sections — use background color shifts instead.
+  - Primary buttons use a 135° gradient from `primary` to `primary-container`, not a flat fill.
+  - Cards use tonal layering (`surface-container-lowest` on `surface-container-low`), no border dividers.
+  - Header uses glassmorphism: 80% opacity + 24px backdrop-blur.
+  - Use the Advisory Chip component (`primary_fixed` bg, uppercase label) for topic tags.
 
 ## Copy Rules
 

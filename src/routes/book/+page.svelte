@@ -91,7 +91,10 @@
 <section class="mx-auto max-w-xl px-6 py-10 sm:py-16">
 	{#if step === 'form'}
 		<div class="mb-10">
-			<p class="mb-3 text-sm font-medium uppercase tracking-widest text-(--color-accent)">
+			<p
+				class="mb-3 text-xs font-semibold uppercase tracking-widest inline-block rounded-full px-3 py-1"
+				style="background-color: var(--color-primary-fixed); color: var(--color-on-primary-fixed);"
+			>
 				60-minute intro call
 			</p>
 			<h1 class="text-3xl font-bold text-(--color-ink)">Book a call or meet for coffee</h1>
@@ -109,10 +112,10 @@
 					<button
 						type="button"
 						onclick={() => setMeetingType('online')}
-						class="rounded-lg border px-4 py-3 text-sm font-medium text-left transition-colors
-							{meetingType === 'online'
-							? 'border-(--color-accent) bg-blue-50 text-(--color-accent)'
-							: 'border-(--color-border) text-(--color-ink-muted) hover:border-(--color-ink)'}"
+						class="rounded-lg px-4 py-3 text-sm font-medium text-left transition-colors"
+						style={meetingType === 'online'
+							? 'background-color: var(--color-primary-fixed); color: var(--color-on-primary-fixed);'
+							: 'background-color: var(--color-surface-container-low); color: var(--color-on-surface-muted);'}
 					>
 						<span class="block font-semibold text-inherit">Video call</span>
 						<span class="block text-xs mt-0.5 opacity-75">60 min, any timezone</span>
@@ -120,10 +123,10 @@
 					<button
 						type="button"
 						onclick={() => setMeetingType('inperson')}
-						class="rounded-lg border px-4 py-3 text-sm font-medium text-left transition-colors
-							{meetingType === 'inperson'
-							? 'border-(--color-accent) bg-blue-50 text-(--color-accent)'
-							: 'border-(--color-border) text-(--color-ink-muted) hover:border-(--color-ink)'}"
+						class="rounded-lg px-4 py-3 text-sm font-medium text-left transition-colors"
+						style={meetingType === 'inperson'
+							? 'background-color: var(--color-primary-fixed); color: var(--color-on-primary-fixed);'
+							: 'background-color: var(--color-surface-container-low); color: var(--color-on-surface-muted);'}
 					>
 						<span class="block font-semibold text-inherit">In person</span>
 						<span class="block text-xs mt-0.5 opacity-75">Coffee in Singapore</span>
@@ -142,10 +145,9 @@
 					bind:value={name}
 					aria-invalid={!!errors.name}
 					aria-describedby={errors.name ? 'name-error' : undefined}
-					class="w-full rounded-md border px-3 py-2.5 text-sm text-(--color-ink) outline-none transition-colors placeholder:text-(--color-ink-muted)
-						{errors.name
-						? 'border-red-400 focus:border-red-500'
-						: 'border-(--color-border) focus:border-(--color-accent)'}"
+					class="w-full rounded-md px-3 py-2.5 text-sm text-(--color-ink) outline-none transition-colors placeholder:text-(--color-ink-muted)
+					{errors.name ? 'ring-1 ring-red-400' : ''}"
+					style="background-color: var(--color-surface-container-low);"
 					placeholder="Jane Smith"
 				/>
 				{#if errors.name}
@@ -164,10 +166,9 @@
 					bind:value={email}
 					aria-invalid={!!errors.email}
 					aria-describedby={errors.email ? 'email-error' : undefined}
-					class="w-full rounded-md border px-3 py-2.5 text-sm text-(--color-ink) outline-none transition-colors placeholder:text-(--color-ink-muted)
-						{errors.email
-						? 'border-red-400 focus:border-red-500'
-						: 'border-(--color-border) focus:border-(--color-accent)'}"
+					class="w-full rounded-md px-3 py-2.5 text-sm text-(--color-ink) outline-none transition-colors placeholder:text-(--color-ink-muted)
+					{errors.email ? 'ring-1 ring-red-400' : ''}"
+					style="background-color: var(--color-surface-container-low);"
 					placeholder="jane@company.com"
 				/>
 				{#if errors.email}
@@ -186,10 +187,9 @@
 					bind:value={company}
 					aria-invalid={!!errors.company}
 					aria-describedby={errors.company ? 'company-error' : undefined}
-					class="w-full rounded-md border px-3 py-2.5 text-sm text-(--color-ink) outline-none transition-colors placeholder:text-(--color-ink-muted)
-						{errors.company
-						? 'border-red-400 focus:border-red-500'
-						: 'border-(--color-border) focus:border-(--color-accent)'}"
+					class="w-full rounded-md px-3 py-2.5 text-sm text-(--color-ink) outline-none transition-colors placeholder:text-(--color-ink-muted)
+					{errors.company ? 'ring-1 ring-red-400' : ''}"
+					style="background-color: var(--color-surface-container-low);"
 					placeholder="Acme Inc."
 				/>
 				{#if errors.company}
@@ -207,10 +207,9 @@
 					rows={4}
 					aria-invalid={!!errors.challenge}
 					aria-describedby={errors.challenge ? 'challenge-error' : undefined}
-					class="w-full resize-none rounded-md border px-3 py-2.5 text-sm text-(--color-ink) outline-none transition-colors placeholder:text-(--color-ink-muted)
-						{errors.challenge
-						? 'border-red-400 focus:border-red-500'
-						: 'border-(--color-border) focus:border-(--color-accent)'}"
+					class="w-full resize-none rounded-md px-3 py-2.5 text-sm text-(--color-ink) outline-none transition-colors placeholder:text-(--color-ink-muted)
+					{errors.challenge ? 'ring-1 ring-red-400' : ''}"
+					style="background-color: var(--color-surface-container-low);"
 					placeholder="e.g. We are losing hours each week on manual reporting and need a practical AI rollout plan"
 				></textarea>
 				{#if errors.challenge}
@@ -220,7 +219,8 @@
 
 			<button
 				type="submit"
-				class="w-full rounded-md bg-(--color-accent) px-6 py-3 text-sm font-medium text-white hover:bg-(--color-accent-hover) transition-colors"
+				class="w-full rounded-md px-6 py-3 text-sm font-medium text-white transition-colors"
+				style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));"
 			>
 				See available times →
 			</button>
@@ -238,7 +238,8 @@
 			href={calendarUrl}
 			target="_blank"
 			rel="noopener noreferrer"
-			class="inline-block rounded-md bg-(--color-accent) px-6 py-3 text-sm font-medium text-white hover:bg-(--color-accent-hover) transition-colors"
+			class="inline-block rounded-md px-6 py-3 text-sm font-medium text-white transition-colors"
+			style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));"
 		>
 			Open scheduling page
 		</a>
