@@ -49,12 +49,6 @@
 				href="/ai-transformation"
 				class="group rounded-xl p-6 transition-colors bg-(--color-surface-container-lowest) hover:bg-white"
 			>
-				<span
-					class="mb-3 inline-block rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wide"
-					style="background-color: var(--color-primary-fixed); color: var(--color-on-primary-fixed);"
-				>
-					Primary focus
-				</span>
 				<h3
 					class="mb-2 text-lg font-semibold text-(--color-ink) group-hover:text-(--color-primary) transition-colors"
 				>

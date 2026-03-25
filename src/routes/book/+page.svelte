@@ -2,7 +2,9 @@
 	import { onMount } from 'svelte';
 
 	let step: 'form' | 'calendar' = $state('form');
-	let meetingType: 'online' | 'inperson' = $state<'online' | 'inperson'>('online');
+	let meetingType: 'online' | 'inperson' | 'whatsapp' = $state<'online' | 'inperson' | 'whatsapp'>(
+		'online'
+	);
 
 	let name = $state('');
 	let email = $state('');
@@ -11,6 +13,8 @@
 
 	let errors: Record<string, string> = $state({});
 
+	const WHATSAPP_NUMBER = '6597218628';
+
 	const CALENDAR_ONLINE =
 		'https://calendar.google.com/appointments/schedules/AcZssZ07NTRWYmu_u0S81u-W6iMT1oyyARSR5uLkaBXeRr-gekqR39qI2WGl4PHH08TFd0C9PMeDzrIJ';
 	const CALENDAR_INPERSON =
@@ -18,11 +22,21 @@
 
 	const calendarUrl = $derived(meetingType === 'inperson' ? CALENDAR_INPERSON : CALENDAR_ONLINE);
 
+	const whatsappUrl = $derived(() => {
+		const msg = `Hi Michael, I wanted to reach out about AI workflows for my business.\n\nName: ${name}\nCompany: ${company}\nEmail: ${email}\n\n${challenge}`;
+		return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+	});
+
 	function syncStateFromUrl() {
 		const url = new URL(window.location.href);
 		const urlStep = url.searchParams.get('step');
 		const urlMeetingType = url.searchParams.get('meetingType');
-		meetingType = urlMeetingType === 'inperson' ? 'inperson' : 'online';
+		meetingType =
+			urlMeetingType === 'inperson'
+				? 'inperson'
+				: urlMeetingType === 'whatsapp'
+					? 'whatsapp'
+					: 'online';
 		step = urlStep === 'calendar' ? 'calendar' : 'form';
 	}
 
@@ -40,7 +54,7 @@
 		else window.history.replaceState({}, '', url);
 	}
 
-	function setMeetingType(type: 'online' | 'inperson') {
+	function setMeetingType(type: 'online' | 'inperson' | 'whatsapp') {
 		meetingType = type;
 		if (step === 'calendar') syncUrlFromState(false);
 	}
@@ -68,7 +82,11 @@
 			});
 			step = 'calendar';
 			syncUrlFromState(true);
-			window.open(calendarUrl, '_blank', 'noopener,noreferrer');
+			if (meetingType === 'whatsapp') {
+				window.open(whatsappUrl(), '_blank', 'noopener,noreferrer');
+			} else {
+				window.open(calendarUrl, '_blank', 'noopener,noreferrer');
+			}
 		}
 	}
 
@@ -108,7 +126,7 @@
 			<!-- Meeting type -->
 			<div>
 				<p class="mb-3 text-sm font-medium text-(--color-ink)">How would you like to meet?</p>
-				<div class="grid grid-cols-2 gap-3">
+				<div class="grid grid-cols-3 gap-3">
 					<button
 						type="button"
 						onclick={() => setMeetingType('online')}
@@ -118,7 +136,7 @@
 							: 'background-color: var(--color-surface-container-low); color: var(--color-on-surface-muted);'}
 					>
 						<span class="block font-semibold text-inherit">Video call</span>
-						<span class="block text-xs mt-0.5 opacity-75">60 min, any timezone</span>
+						<span class="block text-xs mt-0.5 opacity-75">Online meeting</span>
 					</button>
 					<button
 						type="button"
@@ -130,6 +148,17 @@
 					>
 						<span class="block font-semibold text-inherit">In person</span>
 						<span class="block text-xs mt-0.5 opacity-75">Coffee in Singapore</span>
+					</button>
+					<button
+						type="button"
+						onclick={() => setMeetingType('whatsapp')}
+						class="rounded-lg px-4 py-3 text-sm font-medium text-left transition-colors"
+						style={meetingType === 'whatsapp'
+							? 'background-color: var(--color-primary-fixed); color: var(--color-on-primary-fixed);'
+							: 'background-color: var(--color-surface-container-low); color: var(--color-on-surface-muted);'}
+					>
+						<span class="block font-semibold text-inherit">WhatsApp</span>
+						<span class="block text-xs mt-0.5 opacity-75">Message directly</span>
 					</button>
 				</div>
 			</div>
@@ -222,33 +251,47 @@
 				class="w-full rounded-md px-6 py-3 text-sm font-medium text-white transition-colors"
 				style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));"
 			>
-				See available times →
+				{meetingType === 'whatsapp' ? 'Continue to WhatsApp →' : 'See available times →'}
 			</button>
 		</form>
 	{:else}
 		<div class="mb-8">
-			<h1 class="text-3xl font-bold text-(--color-ink)">Open calendar</h1>
+			<h1 class="text-3xl font-bold text-(--color-ink)">
+				{meetingType === 'whatsapp' ? 'Open WhatsApp' : 'Open calendar'}
+			</h1>
 			<p class="mt-2 text-base text-(--color-ink-muted)">
-				{meetingType === 'inperson'
-					? 'Your booking page opened in a new tab. If it did not open, use the button below.'
+				{meetingType === 'whatsapp'
+					? 'Your WhatsApp chat opened in a new tab. If it did not open, use the button below.'
 					: 'Your booking page opened in a new tab. If it did not open, use the button below.'}
 			</p>
 		</div>
-		<a
-			href={calendarUrl}
-			target="_blank"
-			rel="noopener noreferrer"
-			class="inline-block rounded-md px-6 py-3 text-sm font-medium text-white transition-colors"
-			style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));"
-		>
-			Open scheduling page
-		</a>
+		{#if meetingType === 'whatsapp'}
+			<a
+				href={whatsappUrl()}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-block rounded-md px-6 py-3 text-sm font-medium text-white transition-colors"
+				style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));"
+			>
+				Open WhatsApp
+			</a>
+		{:else}
+			<a
+				href={calendarUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-block rounded-md px-6 py-3 text-sm font-medium text-white transition-colors"
+				style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));"
+			>
+				Open scheduling page
+			</a>
+		{/if}
 		<button
 			onclick={() => {
 				step = 'form';
 				syncUrlFromState(true);
 			}}
-			class="mt-4 text-sm text-(--color-ink-muted) hover:text-(--color-ink) transition-colors"
+			class="mt-4 block text-sm text-(--color-ink-muted) hover:text-(--color-ink) transition-colors"
 		>
 			← Back
 		</button>
