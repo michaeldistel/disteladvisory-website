@@ -1,10 +1,23 @@
 <script lang="ts">
-	import { GTM_CONTAINER_ID } from '$lib/site-config';
+	import { page } from '$app/state';
+	import { GTM_CONTAINER_ID, SITE_URL } from '$lib/site-config';
 
 	import '../app.css';
 	let { children } = $props();
 
 	const gtmContainerId = GTM_CONTAINER_ID?.trim();
+
+	function normalisePathname(pathname: string): string {
+		if (pathname !== '/' && pathname.endsWith('/')) {
+			return pathname.slice(0, -1);
+		}
+
+		return pathname;
+	}
+
+	const canonicalHref = $derived(
+		new URL(normalisePathname(page.url.pathname), SITE_URL).toString()
+	);
 
 	const nav = [
 		{ href: '/ai-transformation', label: 'AI Transformation' },
@@ -14,6 +27,7 @@
 </script>
 
 <svelte:head>
+	<link rel="canonical" href={canonicalHref} />
 	{#if gtmContainerId}
 		<script>
 			window.dataLayer = window.dataLayer || [];
