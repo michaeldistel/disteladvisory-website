@@ -6,16 +6,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://disteladvisory.com/fractional-cto</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://disteladvisory.com/technical-advisory</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://disteladvisory.com/ai-transformation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -24,5 +14,15 @@
     <loc>https://disteladvisory.com/book</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://disteladvisory.com/fractional-cto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://disteladvisory.com/technical-advisory</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
