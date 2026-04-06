@@ -7,5 +7,10 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ## [Unreleased]
 
 ### Added
+
 - Initial project scaffold
 - GA4, Google Ads, LinkedIn Insight Tag, Meta Pixel install hooks via public env vars
+- Sitewide self-referencing canonical tag via `$app/state` page URL
+- Prebuild script to auto-generate `static/sitemap.xml`, excluding noindex pages
+- nginx 301 redirect for trailing-slash URLs
+- `SITE_URL` constant in `src/lib/site-config.ts`
