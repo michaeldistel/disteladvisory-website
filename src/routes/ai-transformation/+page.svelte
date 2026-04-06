@@ -1,9 +1,72 @@
+<script lang="ts">
+	import {
+		buildServiceSchema,
+		buildBreadcrumbSchema,
+		buildFaqSchema,
+		serialise,
+		SITE_URL
+	} from '$lib/schema';
+
+	const serviceSchema = serialise(
+		buildServiceSchema({
+			name: 'AI Transformation',
+			description:
+				'Practical AI workflow implementation for SMEs and mid-sized teams. Audit, prioritise, and build AI into daily operations, with clear ownership and measurable outcomes.',
+			url: `${SITE_URL}/ai-transformation`,
+			serviceType: 'AI Consulting'
+		})
+	);
+
+	const breadcrumbSchema = serialise(
+		buildBreadcrumbSchema([
+			{ name: 'Home', url: SITE_URL },
+			{ name: 'AI Transformation', url: `${SITE_URL}/ai-transformation` }
+		])
+	);
+
+	const faqSchema = serialise(
+		buildFaqSchema([
+			{
+				question: 'How long does an AI transformation engagement take?',
+				answer:
+					'Most engagements deliver measurable outcomes within 30 to 90 days. The first workflows are typically live within four to six weeks of the opportunity audit.'
+			},
+			{
+				question: 'What size of business is this suitable for?',
+				answer:
+					'The engagement is designed for SMEs and mid-sized teams, roughly 10 to 500 people. It is not suited to solo freelancers or teams with no bandwidth to trial new workflows.'
+			},
+			{
+				question: 'Do we need a technical team to get started?',
+				answer:
+					'No. The engagement is designed for non-technical leadership teams. You need one person willing to own adoption internally once workflows are built, but no engineering background is required.'
+			},
+			{
+				question: 'Which AI tools does the engagement use?',
+				answer:
+					'The tooling is chosen to fit your workflows, not the other way around. Common tools include Claude, ChatGPT, Cursor, Notion AI, and custom automations where off-the-shelf options fall short.'
+			},
+			{
+				question: 'What happens after the engagement ends?',
+				answer:
+					'The goal is a team that can extend and maintain workflows independently. Handover includes documentation and internal training so the capability stays in-house without an ongoing retainer.'
+			}
+		])
+	);
+</script>
+
 <svelte:head>
 	<title>AI Workflow Solutions for SMEs | Distel Advisory</title>
 	<meta
 		name="description"
 		content="Practical AI workflow implementation for SMEs and mid-sized teams. Audit, prioritise, and build AI into daily operations, with clear ownership and measurable outcomes."
 	/>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html `<script type="application/ld+json">${serviceSchema}</script>`}
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html `<script type="application/ld+json">${breadcrumbSchema}</script>`}
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html `<script type="application/ld+json">${faqSchema}</script>`}
 </svelte:head>
 
 <!-- 1. Hero -->

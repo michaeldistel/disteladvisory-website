@@ -1,9 +1,34 @@
+<script lang="ts">
+	import { buildServiceSchema, buildBreadcrumbSchema, serialise, SITE_URL } from '$lib/schema';
+
+	const serviceSchema = serialise(
+		buildServiceSchema({
+			name: 'Technical Advisory',
+			description:
+				'Strategic technical guidance for SME and mid-sized leadership teams facing specific decisions: architecture reviews, vendor evaluation, and hiring support from a former VC and startup CTO.',
+			url: `${SITE_URL}/technical-advisory`,
+			serviceType: 'Technology Consulting'
+		})
+	);
+
+	const breadcrumbSchema = serialise(
+		buildBreadcrumbSchema([
+			{ name: 'Home', url: SITE_URL },
+			{ name: 'Technical Advisory', url: `${SITE_URL}/technical-advisory` }
+		])
+	);
+</script>
+
 <svelte:head>
 	<title>Technical Advisory | Distel Advisory</title>
 	<meta
 		name="description"
 		content="Strategic technical guidance for SME and mid-sized leadership teams facing specific decisions: architecture reviews, vendor evaluation, and hiring support from a former VC and startup CTO."
 	/>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html `<script type="application/ld+json">${serviceSchema}</script>`}
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html `<script type="application/ld+json">${breadcrumbSchema}</script>`}
 </svelte:head>
 
 <!-- Hero: base surface -->

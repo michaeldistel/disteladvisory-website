@@ -3,15 +3,15 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  preprocess: vitePreprocess(),
-  kit: {
-    adapter: adapter(),
-    prerender: {
-      handleMissingId: 'warn',
-      handleUnseenRoutes: 'ignore',
-      entries: ['*']
-    }
-  }
+	preprocess: vitePreprocess(),
+	kit: {
+		adapter: adapter(),
+		prerender: {
+			handleMissingId: 'warn',
+			handleUnseenRoutes: 'ignore',
+			entries: ['*']
+		}
+	}
 };
 
 export default config;

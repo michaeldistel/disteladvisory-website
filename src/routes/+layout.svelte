@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { GTM_CONTAINER_ID, SITE_URL } from '$lib/site-config';
+	import { buildOrganisationSchema, buildWebSiteSchema, serialise } from '$lib/schema';
 
 	import '../app.css';
 	let { children } = $props();
@@ -19,6 +20,9 @@
 		new URL(normalisePathname(page.url.pathname), SITE_URL).toString()
 	);
 
+	const organisationSchema = serialise(buildOrganisationSchema());
+	const websiteSchema = serialise(buildWebSiteSchema());
+
 	const nav = [
 		{ href: '/ai-transformation', label: 'AI Transformation' },
 		{ href: '/fractional-cto', label: 'Fractional CTO' },
@@ -28,6 +32,11 @@
 
 <svelte:head>
 	<link rel="canonical" href={canonicalHref} />
+	<!-- Organisation + WebSite JSON-LD: sitewide entity signals -->
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html `<script type="application/ld+json">${organisationSchema}</script>`}
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html `<script type="application/ld+json">${websiteSchema}</script>`}
 	{#if gtmContainerId}
 		<script>
 			window.dataLayer = window.dataLayer || [];
