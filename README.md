@@ -9,7 +9,7 @@ Marketing website for Distel Advisory
 - **Framework:** SvelteKit (static site generation)
 - **Styling:** Tailwind CSS
 - **Package manager:** pnpm
-- **Deployment:** Docker + nginx, reverse-proxied via Traefik
+- **Deployment:** Cloudflare Pages
 
 ## Development
 
@@ -23,7 +23,7 @@ pnpm lint       # lint check
 ## Build & Deploy
 
 ```sh
-pnpm prod:deploy   # build + rsync + docker restart
+pnpm cf:deploy     # build + upload to Cloudflare Pages
 ```
 
 ## Tracking config

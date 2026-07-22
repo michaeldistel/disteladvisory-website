@@ -5,7 +5,9 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: adapter(),
+		// fallback emits build/404.html, which Cloudflare Pages serves with a
+		// 404 status for unmatched paths (nginx used error_page 404 before).
+		adapter: adapter({ fallback: '404.html' }),
 		prerender: {
 			handleMissingId: 'warn',
 			handleUnseenRoutes: 'ignore',

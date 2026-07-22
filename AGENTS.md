@@ -11,7 +11,7 @@ Marketing website for Distel Advisory
 - SvelteKit + adapter-static (SSG)
 - Tailwind CSS
 - pnpm (package manager)
-- Docker + nginx:alpine, Traefik reverse proxy
+- Cloudflare Pages (static upload of the `build/` directory)
 
 ## Key Commands
 
@@ -21,13 +21,19 @@ pnpm build          # production build (includes prebuild)
 pnpm check          # svelte-check + type check
 pnpm format         # prettier --write
 pnpm lint           # prettier --check
-pnpm prod:deploy    # build + rsync + docker restart (ask first)
+pnpm cf:deploy      # build + upload to Cloudflare Pages (ask first)
 ```
 
 ## Deployment
 
 - Never deploy without explicit user permission.
-- Deployment copies `build/`, `prod.compose.yml`, `nginx/` via rsync to homelab, then restarts Docker container.
+- `pnpm cf:deploy` builds and uploads `build/` to the `disteladvisory-website`
+  Cloudflare Pages project. There is no server to log into.
+- Response headers (CSP, HSTS, permissions policy, asset caching) live in
+  `static/_headers`; path redirects live in `static/_redirects`. Both are copied
+  to the build root and read by Pages at deploy time.
+- `www` -> apex and trailing-slash stripping are handled by Cloudflare, not by
+  those files.
 - Update `static/sitemap.xml` whenever new routes are added.
 
 ## GitHub Flow
