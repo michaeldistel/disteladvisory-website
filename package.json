@@ -16,9 +16,7 @@
 		"format": "prettier --write .",
 		"prebuild": "node scripts/generate-build-info.js && node scripts/generate-sitemap.js",
 		"prod:build": "pnpm prebuild && vite build",
-		"prod:deploy:copy": "rsync -avz --delete -e 'ssh' ./* homelab:~/ssd-2tb/apps/michael/disteladvisory-website --include-from='prod.deploy.files.txt' --exclude '*'",
-		"prod:deploy:run": "ssh homelab 'cd ~/ssd-2tb/apps/michael/disteladvisory-website && docker compose -f prod.compose.yml down && docker compose -f prod.compose.yml up -d'",
-		"prod:deploy": "pnpm prod:build && pnpm prod:deploy:copy && pnpm prod:deploy:run"
+		"cf:deploy": "pnpm prod:build && cf pages deploy build --project-name=disteladvisory-website --branch=main --commit-dirty=true"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.10",

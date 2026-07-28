@@ -1,0 +1,11 @@
+# Cloudflare Pages redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# Path-level redirects only. Domain-level redirects (e.g. www -> apex) are NOT
+# supported here - those live in the zone's Redirect Rules on the Cloudflare
+# dashboard (Rules -> Redirect Rules), not in this file.
+#
+# Trailing-slash stripping is Pages default behaviour (/foo/ -> /foo), so the
+# old nginx rule for it is not needed.
+
+# (no path redirects currently)
