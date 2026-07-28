@@ -99,10 +99,10 @@
 </script>
 
 <svelte:head>
-	<title>Book a Call | Distel Advisory</title>
+	<title>Book a 60-Minute Intro Call | Distel Advisory Singapore</title>
 	<meta
 		name="description"
-		content="Book an intro call or meet Michael Distel in person in Singapore."
+		content="Book a 60-minute intro call with Michael Distel for practical advice on your AI or engineering decision. No pitch. Video, WhatsApp, or coffee in Singapore."
 	/>
 </svelte:head>
 

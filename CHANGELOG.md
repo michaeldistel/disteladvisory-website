@@ -17,3 +17,8 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - JSON-LD schema module (`src/lib/schema.ts`) with typed builders for Organisation, WebSite, Service, FAQPage, and BreadcrumbList
 - Sitewide Organisation and WebSite schema injected in root layout
 - Service, Breadcrumb, and FAQPage schema on AI Transformation, Fractional CTO, and Technical Advisory pages
+- `<lastmod>` on every sitemap URL, dated from the last commit touching each page, falling back to file mtime for uncommitted pages
+
+### Changed
+
+- Rewrote the Book and Technical Advisory titles and meta descriptions to fit within search result truncation limits and to name Singapore
