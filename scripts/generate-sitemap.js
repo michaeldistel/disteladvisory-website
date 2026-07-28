@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
@@ -58,6 +59,54 @@ function priorityForRoute(route) {
 	return priorities.get(route) ?? '0.7';
 }
 
+function toDateStamp(value) {
+	return new Date(value).toISOString().slice(0, 10);
+}
+
+// Prefer the last commit that touched the page: that is the last time the
+// content actually changed, rather than the last time the site was built.
+function lastModifiedFromGit(pageFile) {
+	try {
+		const stdout = execFileSync('git', ['log', '-1', '--format=%cI', '--', pageFile], {
+			cwd: projectRoot,
+			encoding: 'utf8',
+			stdio: ['ignore', 'pipe', 'ignore']
+		});
+
+		const committedAt = stdout.trim();
+		return committedAt ? toDateStamp(committedAt) : null;
+	} catch {
+		return null;
+	}
+}
+
+function hasUncommittedChanges(pageFile) {
+	try {
+		const stdout = execFileSync('git', ['status', '--porcelain', '--', pageFile], {
+			cwd: projectRoot,
+			encoding: 'utf8',
+			stdio: ['ignore', 'pipe', 'ignore']
+		});
+
+		return stdout.trim().length > 0;
+	} catch {
+		return false;
+	}
+}
+
+// Falls back to the file mtime for uncommitted pages, or when git is absent
+// (for example a clean CI checkout without history). Deploys can be made from a
+// dirty tree, so an edited page uses its mtime rather than a stale commit date.
+async function lastModifiedForPage(pageFile) {
+	const fromGit = lastModifiedFromGit(pageFile);
+	if (fromGit && !hasUncommittedChanges(pageFile)) {
+		return fromGit;
+	}
+
+	const stats = await fs.stat(pageFile);
+	return toDateStamp(stats.mtime);
+}
+
 function toAbsoluteUrl(route) {
 	if (route === '/') {
 		return `${SITE_URL}/`;
@@ -69,7 +118,7 @@ function toAbsoluteUrl(route) {
 async function generateSitemap() {
 	const pageFiles = await listPageFiles(routesDir);
 
-	const routes = [];
+	const lastModifiedByRoute = new Map();
 	for (const pageFile of pageFiles) {
 		const content = await fs.readFile(pageFile, 'utf8');
 		if (hasNoindex(content)) {
@@ -81,10 +130,14 @@ async function generateSitemap() {
 			continue;
 		}
 
-		routes.push(route);
+		const lastModified = await lastModifiedForPage(pageFile);
+		const existing = lastModifiedByRoute.get(route);
+		if (!existing || lastModified > existing) {
+			lastModifiedByRoute.set(route, lastModified);
+		}
 	}
 
-	const uniqueRoutes = [...new Set(routes)].sort((a, b) => {
+	const uniqueRoutes = [...lastModifiedByRoute.keys()].sort((a, b) => {
 		if (a === '/') return -1;
 		if (b === '/') return 1;
 		return a.localeCompare(b);
@@ -93,7 +146,7 @@ async function generateSitemap() {
 	const urlEntries = uniqueRoutes
 		.map(
 			(route) =>
-				`  <url>\n    <loc>${toAbsoluteUrl(route)}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>${priorityForRoute(route)}</priority>\n  </url>`
+				`  <url>\n    <loc>${toAbsoluteUrl(route)}</loc>\n    <lastmod>${lastModifiedByRoute.get(route)}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priorityForRoute(route)}</priority>\n  </url>`
 		)
 		.join('\n');
 

@@ -20,10 +20,10 @@
 </script>
 
 <svelte:head>
-	<title>Technical Advisory | Distel Advisory</title>
+	<title>Technical Advisory for SMEs in Singapore | Distel Advisory</title>
 	<meta
 		name="description"
-		content="Strategic technical guidance for SME and mid-sized leadership teams facing specific decisions: architecture reviews, vendor evaluation, and hiring support from a former VC and startup CTO."
+		content="Independent technical guidance for SME leaders in Singapore: architecture reviews, vendor evaluation, and engineering hiring, from a former VC and startup CTO."
 	/>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html `<script type="application/ld+json">${serviceSchema}</script>`}
