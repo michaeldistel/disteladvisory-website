@@ -118,10 +118,15 @@
 			<h2 class="mb-6 text-2xl font-bold text-(--color-ink)">About Michael</h2>
 			<div class="space-y-4 text-base leading-relaxed text-(--color-ink-muted)">
 				<p>
-					I've spent 20 years building software and companies across Southeast Asia and beyond. I
-					started with safety-critical systems at Schneider Electric, then co-founded and scaled a
-					bootstrapped company to 20+ people across multiple countries, and later served as CTO at
-					VC-backed startups including FoodRazor and BuildBear Labs.
+					I'm <a
+						href="https://michaeldistel.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-(--color-primary) hover:underline">Michael Distel</a
+					>, and I've spent 20 years building software and companies across Southeast Asia and
+					beyond. I started with safety-critical systems at Schneider Electric, then co-founded and
+					scaled a bootstrapped company to 20+ people across multiple countries, and later served as
+					CTO at VC-backed startups including FoodRazor and BuildBear Labs.
 				</p>
 				<p>
 					In between, I spent two and a half years as an Investment Associate at Cocoon Capital, one
