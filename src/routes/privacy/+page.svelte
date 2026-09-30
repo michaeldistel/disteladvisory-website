@@ -13,8 +13,8 @@
 			<p>
 				Distel is the trading name of Distel Advisory, UEN 53371963A, operated by Michael Distel.
 				For questions about this policy, contact <a
-					href="mailto:michael@distel.sg"
-					class="text-(--color-accent) hover:underline">michael@distel.sg</a
+					href="mailto:enquiries@distel.sg"
+					class="text-(--color-accent) hover:underline">enquiries@distel.sg</a
 				>.
 			</p>
 		</section>
@@ -61,8 +61,9 @@
 			<h2 class="mb-3 text-lg font-semibold text-(--color-ink)">Your rights</h2>
 			<p>
 				You may request access to, correction of, or deletion of any personal data we hold about you
-				by emailing <a href="mailto:michael@distel.sg" class="text-(--color-accent) hover:underline"
-					>michael@distel.sg</a
+				by emailing <a
+					href="mailto:enquiries@distel.sg"
+					class="text-(--color-accent) hover:underline">enquiries@distel.sg</a
 				>. We will respond within 30 days.
 			</p>
 		</section>

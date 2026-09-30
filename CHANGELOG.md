@@ -6,8 +6,18 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 
+### Added
+
+- Build and Delivery service page, linked from the navigation and the home page
+
 ### Changed
 
+- Site copy speaks for the firm rather than one person: "we" throughout, a "How we work" section, and a "Who does the work" section introducing the team and its founder
+- Contact address is `enquiries@distel.sg`
+
+### Removed
+
+- Fractional CTO service page; `/fractional-cto` now redirects to Technical Advisory
 - Rebranded from Distel Advisory to Distel. The registered name and UEN stay in the footer, the privacy policy and the Organisation schema (`legalName`)
 - Site moved to `distel.sg`: canonical URLs, sitemap, robots.txt and JSON-LD now use it, and the contact address is `michael@distel.sg`
 

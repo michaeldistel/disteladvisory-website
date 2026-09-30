@@ -23,7 +23,7 @@
 	const calendarUrl = $derived(meetingType === 'inperson' ? CALENDAR_INPERSON : CALENDAR_ONLINE);
 
 	const whatsappUrl = $derived(() => {
-		const msg = `Hi Michael, I wanted to reach out about AI workflows for my business.\n\nName: ${name}\nCompany: ${company}\nEmail: ${email}\n\n${challenge}`;
+		const msg = `Hi Distel, I wanted to reach out about AI workflows for my business.\n\nName: ${name}\nCompany: ${company}\nEmail: ${email}\n\n${challenge}`;
 		return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 	});
 
@@ -102,7 +102,7 @@
 	<title>Book a 60-Minute Intro Call | Distel Singapore</title>
 	<meta
 		name="description"
-		content="Book a 60-minute intro call with Michael Distel for practical advice on your AI or engineering decision. No pitch. Video, WhatsApp, or coffee in Singapore."
+		content="Book a 60-minute intro call with Distel for practical advice on your AI or engineering decision. No pitch. Video, WhatsApp, or coffee in Singapore."
 	/>
 </svelte:head>
 

@@ -51,8 +51,8 @@
 			<h2 class="mb-3 text-lg font-semibold text-(--color-ink)">Contact</h2>
 			<p>
 				Questions? Email <a
-					href="mailto:michael@distel.sg"
-					class="text-(--color-accent) hover:underline">michael@distel.sg</a
+					href="mailto:enquiries@distel.sg"
+					class="text-(--color-accent) hover:underline">enquiries@distel.sg</a
 				>.
 			</p>
 		</section>

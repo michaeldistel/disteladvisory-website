@@ -8,4 +8,5 @@
 # Trailing-slash stripping is Pages default behaviour (/foo/ -> /foo), so the
 # old nginx rule for it is not needed.
 
-# (no path redirects currently)
+# Fractional CTO service retired Sep 2026; send old links to the nearest service.
+/fractional-cto /technical-advisory 301

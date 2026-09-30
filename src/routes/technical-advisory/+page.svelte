@@ -5,7 +5,7 @@
 		buildServiceSchema({
 			name: 'Technical Advisory',
 			description:
-				'Strategic technical guidance for SME and mid-sized leadership teams facing specific decisions: architecture reviews, vendor evaluation, and hiring support from a former VC and startup CTO.',
+				'Strategic technical guidance for SME and mid-sized leadership teams facing specific decisions: architecture reviews, vendor evaluation, and hiring support from a team led by a former VC and startup CTO.',
 			url: `${SITE_URL}/technical-advisory`,
 			serviceType: 'Technology Consulting'
 		})
@@ -23,7 +23,7 @@
 	<title>Technical Advisory for SMEs in Singapore | Distel</title>
 	<meta
 		name="description"
-		content="Independent technical guidance for SME leaders in Singapore: architecture reviews, vendor evaluation, and engineering hiring, from a former VC and startup CTO."
+		content="Independent technical guidance for SME leaders in Singapore: architecture reviews, vendor evaluation, and engineering hiring, from a team led by a former VC and startup CTO."
 	/>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html `<script type="application/ld+json">${serviceSchema}</script>`}
@@ -56,7 +56,7 @@
 	<div class="mx-auto max-w-5xl px-6 py-8 sm:py-14">
 		<h2 class="mb-10 text-2xl font-bold text-(--color-ink)">What's included</h2>
 		<ul class="grid gap-6 sm:grid-cols-2">
-			{#each [{ title: 'Technology strategy', body: 'Evaluate your current stack, surface hidden risks, and map out a realistic technical path aligned with your business goals and runway.' }, { title: 'Architecture reviews', body: 'A structured review of your system design, codebase, or technical plans with clear written recommendations you can act on.' }, { title: 'Hiring & team assessment', body: 'Help defining technical roles, writing job descriptions, and evaluating engineering candidates or agencies.' }, { title: 'Fundraising prep', body: "I've seen how VCs assess technical risk from inside a fund. I help you make your technical story credible before the room gets sceptical." }] as item}
+			{#each [{ title: 'Technology strategy', body: 'Evaluate your current stack, surface hidden risks, and map out a realistic technical path aligned with your business goals and runway.' }, { title: 'Architecture reviews', body: 'A structured review of your system design, codebase, or technical plans with clear written recommendations you can act on.' }, { title: 'Hiring & team assessment', body: 'Help defining technical roles, writing job descriptions, and evaluating engineering candidates or agencies.' }, { title: 'Fundraising prep', body: 'Our founder has seen how VCs assess technical risk from inside a fund. We help you make your technical story credible before the room gets sceptical.' }] as item}
 				<li class="rounded-xl bg-(--color-surface-container-lowest) p-6">
 					<h3 class="mb-2 text-base font-semibold text-(--color-ink)">{item.title}</h3>
 					<p class="text-sm leading-relaxed text-(--color-ink-muted)">{item.body}</p>
@@ -92,15 +92,15 @@
 				Background that's actually relevant
 			</h2>
 			<p class="mb-4 text-base leading-relaxed text-(--color-ink-muted)">
-				I've written software for power plants where failure wasn't an option (Schneider Electric),
-				bootstrapped a 20-person company from scratch, served as CTO at two VC-backed startups, and
-				spent two and a half years as an Investment Associate at Cocoon Capital, one of Singapore's
-				leading early-stage VC firms.
+				Advisory work is led by our founder, Michael Distel. He has written software for power
+				plants where failure wasn't an option (Schneider Electric), bootstrapped a 20-person company
+				from scratch, served as CTO at two VC-backed startups, and spent two and a half years as an
+				Investment Associate at Cocoon Capital, one of Singapore's leading early-stage VC firms.
 			</p>
 			<p class="text-base leading-relaxed text-(--color-ink-muted)">
-				I've also built on blockchain infrastructure, evaluated dozens of startups as an investor,
-				and watched deals succeed and fail for reasons that had nothing to do with the product. That
-				breadth is what I bring to advisory.
+				Our engineering team adds hands-on depth: a recommendation can be tested against real code,
+				and if you decide to act on it, the same team can build it. That combination of judgement
+				and delivery is what we bring to advisory.
 			</p>
 		</div>
 	</div>
@@ -111,8 +111,8 @@
 	<div class="max-w-xl">
 		<h2 class="mb-3 text-2xl font-bold text-(--color-ink)">Let's talk through it</h2>
 		<p class="mb-8 text-base text-(--color-ink-muted)">
-			Book a 60-minute intro call. Tell me what you're working through and we'll figure out together
-			if advisory is the right fit.
+			Book a 60-minute intro call. Tell us what you're working through and we'll work out together
+			whether advisory is the right fit.
 		</p>
 		<a
 			href="/book"

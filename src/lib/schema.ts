@@ -23,7 +23,7 @@ export function buildOrganisationSchema() {
 		logo: `${SITE_URL}/favicon.svg`,
 		contactPoint: {
 			'@type': 'ContactPoint',
-			email: 'michael@distel.sg',
+			email: 'enquiries@distel.sg',
 			contactType: 'customer service'
 		},
 		sameAs: [] as string[]
