@@ -2,7 +2,7 @@ import { execFileSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-const SITE_URL = 'https://disteladvisory.com';
+const SITE_URL = 'https://distel.sg';
 const projectRoot = process.cwd();
 const routesDir = path.join(projectRoot, 'src', 'routes');
 const sitemapPath = path.join(projectRoot, 'static', 'sitemap.xml');

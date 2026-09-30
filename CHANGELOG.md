@@ -6,6 +6,11 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 
+### Changed
+
+- Rebranded from Distel Advisory to Distel. The registered name and UEN stay in the footer, the privacy policy and the Organisation schema (`legalName`)
+- Site moved to `distel.sg`: canonical URLs, sitemap, robots.txt and JSON-LD now use it, and the contact address is `michael@distel.sg`
+
 ### Added
 
 - Initial project scaffold

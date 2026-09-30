@@ -2,8 +2,8 @@
 	"name": "disteladvisory-website",
 	"version": "0.1.0",
 	"private": true,
-	"description": "Marketing website for Distel Advisory",
-	"homepage": "https://disteladvisory.com",
+	"description": "Marketing website for Distel",
+	"homepage": "https://distel.sg",
 	"type": "module",
 	"packageManager": "pnpm@10.11.0",
 	"scripts": {

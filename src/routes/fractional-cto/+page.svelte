@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>Fractional CTO | Distel Advisory</title>
+	<title>Fractional CTO | Distel</title>
 	<meta
 		name="description"
 		content="Part-time CTO leadership for growing SMEs, mid-sized businesses, and selected startups. Architecture, engineering team oversight, hiring, and delivery accountability."

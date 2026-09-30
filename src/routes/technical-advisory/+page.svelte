@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>Technical Advisory for SMEs in Singapore | Distel Advisory</title>
+	<title>Technical Advisory for SMEs in Singapore | Distel</title>
 	<meta
 		name="description"
 		content="Independent technical guidance for SME leaders in Singapore: architecture reviews, vendor evaluation, and engineering hiring, from a former VC and startup CTO."

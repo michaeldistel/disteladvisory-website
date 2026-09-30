@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Distel Advisory | Practical AI Transformation for SMEs</title>
+	<title>Distel | Practical AI Transformation for SMEs</title>
 	<meta
 		name="description"
 		content="Practical AI transformation for SMEs and mid-sized businesses in Southeast Asia. Michael Distel helps leadership teams turn AI into real workflows that save time."
