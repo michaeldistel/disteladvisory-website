@@ -24,8 +24,9 @@
 	const websiteSchema = serialise(buildWebSiteSchema());
 
 	const nav = [
-		{ href: '/ai-transformation', label: 'AI Transformation' },
-		{ href: '/fractional-cto', label: 'Fractional CTO' },
+		{ href: '/ai-transformation', label: 'AI Workflows' },
+		{ href: '/build-and-delivery', label: 'Build and Delivery' },
+
 		{ href: '/technical-advisory', label: 'Technical Advisory' }
 	];
 </script>

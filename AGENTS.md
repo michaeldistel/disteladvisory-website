@@ -85,7 +85,7 @@ pnpm cf:deploy      # build + upload to Cloudflare Pages (ask first)
 
 - No em dashes (`—`) anywhere in site copy. Rewrite sentences to avoid them (use a comma, colon, or split into two sentences).
 - No emoji anywhere on the site.
-- Contact email: `michael@distel.sg`.
+- Contact email: `enquiries@distel.sg`.
 - Use `|` as the title separator in `<title>` tags.
 
 ## Change Rules

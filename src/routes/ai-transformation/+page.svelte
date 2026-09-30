@@ -82,7 +82,7 @@
 			Turn AI into workflows your team actually uses.
 		</h1>
 		<p class="mt-6 text-lg leading-relaxed text-(--color-ink-muted)">
-			Most AI projects stall because they lack clear ownership and practical execution. I work with
+			Most AI projects stall because they lack clear ownership and practical execution. We work with
 			SMEs and mid-sized teams to identify the right use cases, build the workflows, and make
 			adoption stick, with measurable outcomes in 30 to 90 days.
 		</p>
@@ -123,7 +123,7 @@
 <section id="whats-included" class="mx-auto max-w-5xl px-6 py-8 sm:py-14">
 	<h2 class="mb-10 text-2xl font-bold text-(--color-ink)">What's included</h2>
 	<ul class="grid gap-6 sm:grid-cols-2">
-		{#each [{ title: 'AI opportunity audit', body: 'A structured review of your current operations to identify where AI can reduce effort, not just the flashiest use case. You get a prioritised shortlist, not a wishlist.' }, { title: 'Prioritisation framework', body: 'We score each opportunity against effort, impact, and adoption risk. You leave with a clear decision on what to build first and what to defer.' }, { title: 'Workflow implementation', body: "Practical AI workflows built around your team's real habits, using tools like Claude, ChatGPT, Cursor, Notion AI, and custom automations where the off-the-shelf options fall short." }, { title: 'Adoption and handover', body: 'The hardest part of any AI rollout is getting the team to actually use it. I handle rollout, training, and internal knowledge transfer so the capability stays in-house.' }] as item}
+		{#each [{ title: 'AI opportunity audit', body: 'A structured review of your current operations to identify where AI can reduce effort, not just the flashiest use case. You get a prioritised shortlist, not a wishlist.' }, { title: 'Prioritisation framework', body: 'We score each opportunity against effort, impact, and adoption risk. You leave with a clear decision on what to build first and what to defer.' }, { title: 'Workflow implementation', body: "Practical AI workflows built around your team's real habits, using tools like Claude, ChatGPT, Cursor, Notion AI, and custom automations where the off-the-shelf options fall short." }, { title: 'Adoption and handover', body: 'The hardest part of any AI rollout is getting the team to actually use it. We handle rollout, training, and internal knowledge transfer so the capability stays in-house.' }] as item}
 			<li class="rounded-xl bg-(--color-surface-container-lowest) p-6">
 				<h3 class="mb-2 text-base font-semibold text-(--color-ink)">{item.title}</h3>
 				<p class="text-sm leading-relaxed text-(--color-ink-muted)">{item.body}</p>
@@ -138,15 +138,16 @@
 		<div class="max-w-2xl">
 			<h2 class="mb-6 text-2xl font-bold text-(--color-ink)">Operator-led, not consultant-led</h2>
 			<p class="mb-4 text-base leading-relaxed text-(--color-ink-muted)">
-				I've spent 20 years building and running software-driven businesses across Southeast Asia.
-				That includes co-founding and scaling a bootstrapped company across multiple countries, CTO
-				roles at VC-backed startups, and two and a half years as an Investment Associate at Cocoon
-				Capital assessing what actually separates businesses that scale from those that stall.
+				The people who scope your workflows are the people who build them. Our Singapore team of
+				implementation and engineering specialists is led by founder Michael Distel, who has spent
+				20 years building and running software-driven businesses across Southeast Asia, including
+				CTO roles at VC-backed startups and two and a half years as an Investment Associate at
+				Cocoon Capital.
 			</p>
 			<p class="text-base leading-relaxed text-(--color-ink-muted)">
-				My approach to AI is the same as my approach to everything else: practical, not evangelical.
-				I'll tell you where AI is a good fit, where it isn't, and what to do instead. The goal is
-				workflows your team is still using six months from now.
+				Our approach to AI is practical, not evangelical. We will tell you where AI is a good fit,
+				where it isn't, and what to do instead. The goal is workflows your team is still using six
+				months from now.
 			</p>
 		</div>
 	</div>
@@ -156,7 +157,7 @@
 <section id="how-it-works" class="mx-auto max-w-5xl px-6 py-8 sm:py-14">
 	<h2 class="mb-10 text-2xl font-bold text-(--color-ink)">How it works</h2>
 	<ol class="grid gap-6 sm:grid-cols-2">
-		{#each [{ title: 'Discovery call', body: 'A 60-minute conversation about your current operations, where time is being lost, and what your team has already tried. No prep required.' }, { title: 'Opportunity audit', body: 'I review your workflows, tools, and team structure to identify the highest-value AI opportunities. You get a ranked shortlist with clear rationale.' }, { title: 'Build and implement', body: 'We build the first one or two workflows together, with your team involved throughout. The point is knowledge transfer, not a handoff.' }, { title: 'Adoption and review', body: "A structured review at 30 and 60 days to confirm adoption, adjust what isn't working, and identify the next round of improvements." }] as item}
+		{#each [{ title: 'Discovery call', body: 'A 60-minute conversation about your current operations, where time is being lost, and what your team has already tried. No prep required.' }, { title: 'Opportunity audit', body: 'We review your workflows, tools, and team structure to identify the highest-value AI opportunities. You get a ranked shortlist with clear rationale.' }, { title: 'Build and implement', body: 'We build the first one or two workflows together, with your team involved throughout. The point is knowledge transfer, not a handoff.' }, { title: 'Adoption and review', body: "A structured review at 30 and 60 days to confirm adoption, adjust what isn't working, and identify the next round of improvements." }] as item}
 			<li class="rounded-xl bg-(--color-surface-container-lowest) p-6">
 				<h3 class="mb-2 text-base font-semibold text-(--color-ink)">{item.title}</h3>
 				<p class="text-sm leading-relaxed text-(--color-ink-muted)">{item.body}</p>

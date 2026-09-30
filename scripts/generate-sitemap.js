@@ -50,7 +50,7 @@ function hasNoindex(content) {
 function priorityForRoute(route) {
 	const priorities = new Map([
 		['/', '1.0'],
-		['/fractional-cto', '0.9'],
+
 		['/technical-advisory', '0.9'],
 		['/ai-transformation', '0.9'],
 		['/book', '0.8']
