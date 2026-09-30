@@ -56,7 +56,7 @@
 </script>
 
 <svelte:head>
-	<title>AI Workflow Solutions for SMEs | Distel Advisory</title>
+	<title>AI Workflow Solutions for SMEs | Distel</title>
 	<meta
 		name="description"
 		content="Practical AI workflow implementation for SMEs and mid-sized teams. Audit, prioritise, and build AI into daily operations, with clear ownership and measurable outcomes."

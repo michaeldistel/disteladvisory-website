@@ -84,7 +84,7 @@
 				href="/"
 				class="text-base font-semibold tracking-tight text-(--color-ink) hover:text-(--color-primary) transition-colors"
 			>
-				Distel Advisory
+				Distel
 			</a>
 			<a
 				href="/book"
@@ -139,7 +139,7 @@
 		class="mx-auto max-w-5xl px-6 py-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
 	>
 		<p class="text-sm text-(--color-ink-muted)">
-			© {new Date().getFullYear()} Distel Advisory. All rights reserved.
+			© {new Date().getFullYear()} Distel Advisory, Singapore, UEN 53371963A. All rights reserved.
 		</p>
 		<ul class="flex gap-5 text-sm text-(--color-ink-muted)">
 			<li><a href="/privacy" class="hover:text-(--color-ink) transition-colors">Privacy</a></li>

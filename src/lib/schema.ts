@@ -7,7 +7,7 @@
  * All types follow schema.org vocabulary.
  */
 
-export const SITE_URL = 'https://disteladvisory.com';
+export const SITE_URL = 'https://distel.sg';
 
 // ---------------------------------------------------------------------------
 // Sitewide schemas
@@ -17,12 +17,13 @@ export function buildOrganisationSchema() {
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'Organization',
-		name: 'Distel Advisory',
+		name: 'Distel',
+		legalName: 'Distel Advisory',
 		url: SITE_URL,
 		logo: `${SITE_URL}/favicon.svg`,
 		contactPoint: {
 			'@type': 'ContactPoint',
-			email: 'michael@disteladvisory.com',
+			email: 'michael@distel.sg',
 			contactType: 'customer service'
 		},
 		sameAs: [] as string[]
@@ -33,7 +34,7 @@ export function buildWebSiteSchema() {
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'WebSite',
-		name: 'Distel Advisory',
+		name: 'Distel',
 		url: SITE_URL
 	};
 }
@@ -60,7 +61,7 @@ export function buildServiceSchema(opts: ServiceSchemaOptions) {
 		serviceType: opts.serviceType ?? opts.name,
 		provider: {
 			'@type': 'Organization',
-			name: 'Distel Advisory',
+			name: 'Distel',
 			url: SITE_URL
 		},
 		areaServed: opts.areaServed ?? 'Southeast Asia'

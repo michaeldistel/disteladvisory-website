@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://disteladvisory.com/sitemap.xml
+Sitemap: https://distel.sg/sitemap.xml

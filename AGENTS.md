@@ -4,7 +4,7 @@ Project-local rules for this `disteladvisory-website` website repo only.
 
 ## Project Intent
 
-Marketing website for Distel Advisory
+Marketing website for Distel (registered name Distel Advisory), served at `distel.sg`
 
 ## Stack
 
@@ -85,7 +85,7 @@ pnpm cf:deploy      # build + upload to Cloudflare Pages (ask first)
 
 - No em dashes (`—`) anywhere in site copy. Rewrite sentences to avoid them (use a comma, colon, or split into two sentences).
 - No emoji anywhere on the site.
-- Contact email: `michael@disteladvisory.com`.
+- Contact email: `michael@distel.sg`.
 - Use `|` as the title separator in `<title>` tags.
 
 ## Change Rules

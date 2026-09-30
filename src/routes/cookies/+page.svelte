@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Cookie Policy | Distel Advisory</title>
+	<title>Cookie Policy | Distel</title>
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
@@ -11,8 +11,8 @@
 		<section>
 			<h2 class="mb-3 text-lg font-semibold text-(--color-ink)">Do we use cookies?</h2>
 			<p>
-				Yes. Distel Advisory uses cookies and similar technologies for site security, measurement,
-				and advertising attribution.
+				Yes. Distel uses cookies and similar technologies for site security, measurement, and
+				advertising attribution.
 			</p>
 		</section>
 
@@ -51,8 +51,8 @@
 			<h2 class="mb-3 text-lg font-semibold text-(--color-ink)">Contact</h2>
 			<p>
 				Questions? Email <a
-					href="mailto:michael@disteladvisory.com"
-					class="text-(--color-accent) hover:underline">michael@disteladvisory.com</a
+					href="mailto:michael@distel.sg"
+					class="text-(--color-accent) hover:underline">michael@distel.sg</a
 				>.
 			</p>
 		</section>
