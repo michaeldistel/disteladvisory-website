@@ -38,8 +38,8 @@ accounts came from a vendor whose answer to every question is "we are fully
 compliant". Nobody can say where the prompts end up or who gets to read them. She has
 until Monday to describe safeguards for tools she didn't know were in use.
 
-She assumes this is a paperwork problem. It would be, if what people paste into a
-consumer AI account stayed where they put it. It doesn't.
+She assumes this is a paperwork problem, and it would be if what people paste into a
+consumer AI account stayed where they put it. Here is what happens to it instead.
 
 In September 2026, 404 Media revealed that OpenAI pays hundreds of contractors to read
 real ChatGPT conversations and score the answers. A privacy filter runs first, and the
@@ -51,8 +51,9 @@ months to tell them.
 In July 2025 more than 4,500 "shared" ChatGPT conversations turned up in Google
 results, some with personal details in them. For four months that year a US court also
 ordered OpenAI to keep every chat its users had deleted, because of a copyright case.
-Samsung caught its own engineers in 2023, pasting semiconductor source code into
-ChatGPT to debug it, and banned the tool. Most firms never notice.
+Samsung found out in 2023 that its engineers had pasted semiconductor source code into
+ChatGPT to debug it, and banned the tool. Most firms would have no way of knowing if
+the same thing happened to them.
 
 On 20 July 2026 the Singapore Government told all businesses using AI whose problem
 this is. Its new guidelines on personal data in generative AI say the firm using an AI
