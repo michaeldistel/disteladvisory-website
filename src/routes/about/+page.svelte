@@ -15,7 +15,7 @@
 	title="About Distel and Michael Distel | AI workflows, Singapore"
 	description="Distel is a Singapore team that designs, builds and runs AI workflows for growing businesses. It is led by Michael Distel, who has spent 20 years building software and companies across Southeast Asia."
 	image="/michael-distel.jpg"
-	imageAlt="Michael Distel, founder of Distel"
+	imageAlt="Michael Distel, Distel"
 />
 
 <svelte:head>
@@ -44,30 +44,30 @@
 	</div>
 </section>
 
-<!-- Founder: surface-container-low -->
-<section class="bg-(--color-surface-container-low)" aria-labelledby="founder-heading">
+<!-- Michael: surface-container-low -->
+<section class="bg-(--color-surface-container-low)" aria-labelledby="michael-heading">
 	<div class="mx-auto max-w-5xl px-6 py-8 sm:py-14">
 		<div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-14">
 			<div class="w-full shrink-0 sm:w-auto">
 				<img
 					src="/michael-distel.jpg"
-					alt="Michael Distel, founder of Distel"
+					alt="Michael Distel"
 					width="240"
 					height="240"
 					class="aspect-square w-full max-w-xs rounded-2xl object-cover object-top sm:h-60 sm:w-60 sm:max-w-none"
 				/>
 			</div>
 			<div class="min-w-0">
-				<h2 id="founder-heading" class="mb-6 text-2xl font-bold text-(--color-ink)">
+				<h2 id="michael-heading" class="mb-6 text-2xl font-bold text-(--color-ink)">
 					Michael Distel
 				</h2>
 				<div class="space-y-4 text-base leading-relaxed text-(--color-ink-muted)">
 					<p>
-						Michael founded Distel and leads every engagement. He has spent 20 years building
-						software and companies across Southeast Asia. He started with safety-critical systems at
-						Schneider Electric, co-founded and scaled a bootstrapped company to more than 20 people
-						across several countries, and served as CTO at VC-backed startups including FoodRazor
-						and BuildBear Labs.
+						Michael leads Distel and every engagement. He has spent 20 years building software and
+						companies across Southeast Asia. He started with safety-critical systems at Schneider
+						Electric, co-founded and scaled a bootstrapped company to more than 20 people across
+						several countries, and served as CTO at VC-backed startups including FoodRazor and
+						BuildBear Labs.
 					</p>
 					<p>
 						Two and a half years as an Investment Associate at Cocoon Capital, one of Singapore's

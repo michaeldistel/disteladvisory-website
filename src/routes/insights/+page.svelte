@@ -36,7 +36,7 @@
 			Notes on making AI work in a business
 		</h1>
 		<p class="mt-6 text-lg leading-relaxed text-(--color-ink-muted)">
-			Short posts by our founder, Michael Distel. What a regulation or an incident means for a
+			Short posts by Michael Distel, who leads Distel. What a regulation or an incident means for a
 			Singapore firm that uses AI in its daily work, and what to do about it.
 		</p>
 	</div>

@@ -12,8 +12,8 @@ export const SITE_URL = 'https://distel.sg';
 /** Public profiles for the firm. Add the LinkedIn company page here once it exists. */
 export const ORGANISATION_SAME_AS: string[] = [];
 
-/** Public profiles for the founder. */
-export const FOUNDER_SAME_AS: string[] = ['https://michaeldistel.com'];
+/** Public profiles for Michael Distel. */
+export const MICHAEL_SAME_AS: string[] = ['https://michaeldistel.com'];
 
 // ---------------------------------------------------------------------------
 // Sitewide schemas
@@ -32,9 +32,10 @@ export function buildOrganisationSchema() {
 			email: 'enquiries@distel.sg',
 			contactType: 'customer service'
 		},
-		founder: {
+		employee: {
 			'@type': 'Person',
 			name: 'Michael Distel',
+			jobTitle: 'Managing Director',
 			url: `${SITE_URL}/about`
 		},
 		address: {
@@ -131,7 +132,7 @@ export function buildBreadcrumbSchema(items: BreadcrumbItem[]) {
 }
 
 // ---------------------------------------------------------------------------
-// Person schema (founder / author page)
+// Person schema (author page)
 // ---------------------------------------------------------------------------
 
 export function buildPersonSchema() {
@@ -140,7 +141,7 @@ export function buildPersonSchema() {
 		'@type': 'Person',
 		'@id': `${SITE_URL}/about#michael-distel`,
 		name: 'Michael Distel',
-		jobTitle: 'Founder',
+		jobTitle: 'Managing Director',
 		url: `${SITE_URL}/about`,
 		image: `${SITE_URL}/michael-distel.jpg`,
 		worksFor: {
@@ -154,7 +155,7 @@ export function buildPersonSchema() {
 			'Back-office AI agents',
 			'Technical due diligence'
 		],
-		sameAs: FOUNDER_SAME_AS
+		sameAs: MICHAEL_SAME_AS
 	};
 }
 

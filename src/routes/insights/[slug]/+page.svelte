@@ -91,7 +91,7 @@
 				<span>
 					By <a href="/about" class="font-medium text-(--color-ink) hover:text-(--color-primary)"
 						>{post.author}</a
-					>, founder of Distel
+					>, Distel
 				</span>
 			</p>
 		</div>
