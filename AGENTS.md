@@ -105,3 +105,19 @@ pnpm cf:deploy      # build + upload to Cloudflare Pages (ask first)
 
 - Do not auto-commit or push unless explicitly requested.
 - When a commit is requested, use `/commit` instead of manual commit steps.
+
+## Insights (blog)
+
+- Posts are markdown under `src/content/insights/<slug>.md`. The frontmatter is the
+  contract: `title`, `slug`, `date`, `status` (`draft` or `published`), `author`,
+  `summary`, `seo.title`, `seo.description`, `seo.target_queries`, `faq[]` (`q`, `a`),
+  `download`. Only `published` posts are built or listed in the sitemap.
+- The post body starts with a level-one heading that repeats the title; the page strips
+  it and renders the title itself. Body links to the checklist use site paths.
+- Voice, length and structure are governed by the Distel marketing folder,
+  `08-marketing/blog-style.md`. The markdown there is the draft; the copy here is what
+  ships. Keep them identical when publishing.
+- Checklists are markdown under `src/content/checklists/` with a page per checklist under
+  `src/routes/insights/`, and the PDF under `static/downloads/`.
+- Every page sets its metadata through `$lib/components/Seo.svelte`, never with bare
+  `<title>` or description tags.

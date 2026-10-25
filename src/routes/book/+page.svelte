@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
 	import { onMount } from 'svelte';
 
 	let step: 'form' | 'calendar' = $state('form');
@@ -98,13 +99,10 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Book a 60-Minute Intro Call | Distel Singapore</title>
-	<meta
-		name="description"
-		content="Book a 60-minute intro call with Distel for practical advice on your AI or engineering decision. No pitch. Video, WhatsApp, or coffee in Singapore."
-	/>
-</svelte:head>
+<Seo
+	title="Book a 60-Minute Intro Call | Distel Singapore"
+	description="Book a 60-minute intro call with Distel for practical advice on your AI or engineering decision. No pitch. Video, WhatsApp, or coffee in Singapore."
+/>
 
 <section class="mx-auto max-w-xl px-6 py-10 sm:py-16">
 	{#if step === 'form'}

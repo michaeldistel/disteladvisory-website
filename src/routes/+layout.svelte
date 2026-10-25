@@ -26,8 +26,8 @@
 	const nav = [
 		{ href: '/ai-transformation', label: 'AI Workflows' },
 		{ href: '/build-and-delivery', label: 'Build and Delivery' },
-
-		{ href: '/technical-advisory', label: 'Technical Advisory' }
+		{ href: '/technical-advisory', label: 'Technical Advisory' },
+		{ href: '/insights', label: 'Insights' }
 	];
 </script>
 

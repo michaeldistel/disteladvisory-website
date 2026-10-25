@@ -9,6 +9,12 @@
 
 export const SITE_URL = 'https://distel.sg';
 
+/** Public profiles for the firm. Add the LinkedIn company page here once it exists. */
+export const ORGANISATION_SAME_AS: string[] = [];
+
+/** Public profiles for the founder. */
+export const FOUNDER_SAME_AS: string[] = ['https://michaeldistel.com'];
+
 // ---------------------------------------------------------------------------
 // Sitewide schemas
 // ---------------------------------------------------------------------------
@@ -26,7 +32,17 @@ export function buildOrganisationSchema() {
 			email: 'enquiries@distel.sg',
 			contactType: 'customer service'
 		},
-		sameAs: [] as string[]
+		founder: {
+			'@type': 'Person',
+			name: 'Michael Distel',
+			url: `${SITE_URL}/about`
+		},
+		address: {
+			'@type': 'PostalAddress',
+			addressCountry: 'SG',
+			addressLocality: 'Singapore'
+		},
+		sameAs: ORGANISATION_SAME_AS
 	};
 }
 
@@ -111,6 +127,79 @@ export function buildBreadcrumbSchema(items: BreadcrumbItem[]) {
 			name: item.name,
 			item: item.url
 		}))
+	};
+}
+
+// ---------------------------------------------------------------------------
+// Person schema (founder / author page)
+// ---------------------------------------------------------------------------
+
+export function buildPersonSchema() {
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		'@id': `${SITE_URL}/about#michael-distel`,
+		name: 'Michael Distel',
+		jobTitle: 'Founder',
+		url: `${SITE_URL}/about`,
+		image: `${SITE_URL}/michael-distel.jpg`,
+		worksFor: {
+			'@type': 'Organization',
+			name: 'Distel',
+			url: SITE_URL
+		},
+		knowsAbout: [
+			'AI workflow automation',
+			'Personal Data Protection Act (Singapore)',
+			'Back-office AI agents',
+			'Technical due diligence'
+		],
+		sameAs: FOUNDER_SAME_AS
+	};
+}
+
+// ---------------------------------------------------------------------------
+// BlogPosting schema (insights posts)
+// ---------------------------------------------------------------------------
+
+export interface BlogPostingSchemaOptions {
+	headline: string;
+	description: string;
+	url: string;
+	datePublished: string;
+	dateModified?: string;
+	image?: string;
+	wordCount?: number;
+}
+
+export function buildBlogPostingSchema(opts: BlogPostingSchemaOptions) {
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'BlogPosting',
+		headline: opts.headline,
+		description: opts.description,
+		url: opts.url,
+		mainEntityOfPage: opts.url,
+		datePublished: opts.datePublished,
+		dateModified: opts.dateModified ?? opts.datePublished,
+		inLanguage: 'en-SG',
+		image: opts.image ?? `${SITE_URL}/og/default.png`,
+		wordCount: opts.wordCount,
+		author: {
+			'@type': 'Person',
+			'@id': `${SITE_URL}/about#michael-distel`,
+			name: 'Michael Distel',
+			url: `${SITE_URL}/about`
+		},
+		publisher: {
+			'@type': 'Organization',
+			name: 'Distel',
+			url: SITE_URL,
+			logo: {
+				'@type': 'ImageObject',
+				url: `${SITE_URL}/favicon.svg`
+			}
+		}
 	};
 }
 

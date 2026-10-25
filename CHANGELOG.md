@@ -8,6 +8,11 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ### Added
 
+- Insights section at `/insights`: posts are markdown files under `src/content/insights/` with YAML frontmatter, rendered at build time with BlogPosting, Breadcrumb and FAQ structured data. First post: the PDPC's generative AI guidelines of 20 July 2026
+- AI and personal data checklist page at `/insights/ai-and-personal-data-checklist`, with the PDF under `/downloads/`
+- About page at `/about` with a Person schema for the founder, linked from post bylines
+- Shared `Seo` component: Open Graph and Twitter card tags on every page, with a default 1200x630 share image at `/og/default.png`
+- Organisation schema carries the founder and a Singapore address; sitemap lists published posts
 - Build and Delivery service page, linked from the navigation and the home page
 
 ### Changed
