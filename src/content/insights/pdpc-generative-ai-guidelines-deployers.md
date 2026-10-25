@@ -1,5 +1,5 @@
 ---
-title: 'The Singapore Government has decided who is responsible for AI. It is you.'
+title: 'Singapore has made your firm responsible for the AI it uses'
 slug: pdpc-generative-ai-guidelines-deployers
 date: 2026-10-25
 status: published
@@ -23,73 +23,70 @@ faq:
     a: "State the purpose of each AI system, give it only the data that purpose needs, name an owner for its prompts and logs, tell staff in writing what they may put in, keep a record of the vendor's safeguards, and review all of it when the tool gains new abilities. Agents that act across systems need role-based access limits and a point at which they hand over to a person."
 ---
 
-# The Singapore Government has decided who is responsible for AI. It is you.
+# Singapore has made your firm responsible for the AI it uses
 
 I hear a version of this story from clients often enough that I can tell it before
 they finish.
 
 Friday afternoon at a distributor. The finance manager opens an email from their
-largest customer's compliance team. It is a vendor assessment, twelve pages, due
+largest customer's compliance team. It's a vendor assessment, twelve pages, due
 Monday. Question 7 reads "Do you use AI tools to process our data? Describe the safeguards."
 
 She asks around. The sales team has been pasting customer statements into ChatGPT for
 months, on personal accounts, to draft chasing emails. The invoice-matching tool in
 accounts came from a vendor whose answer to every question is "we are fully
-compliant". Nobody can say where the prompts go, how long they are kept, or who reads
-them. She has until Monday to describe safeguards for tools she did not know were in
-use.
+compliant". Nobody can say where the prompts end up or who gets to read them. She has
+until Monday to describe safeguards for tools she didn't know were in use.
 
-She assumes this is a paperwork problem. It would be, if the things people paste into
-a consumer AI account stayed where they were put. They do not.
+She assumes this is a paperwork problem. It would be, if what people paste into a
+consumer AI account stayed where they put it. It doesn't.
 
-- **People read them.** In September 2026, 404 Media revealed that OpenAI pays hundreds
-  of contractors to read real ChatGPT conversations and score the answers. A privacy
-  filter runs first, and the company admits sensitive details get through it.
-- **They leak.** In March 2025 a contractor at a New South Wales government agency
-  uploaded a spreadsheet to ChatGPT with the names, addresses, phone numbers and some
-  health details of up to 3,000 flood victims. The agency took six months to tell them.
-- **They end up in search engines.** In July 2025 more than 4,500 "shared" ChatGPT
-  conversations turned up in Google results, some with personal details in them.
-- **They cannot always be deleted.** For four months in 2025 a US court ordered OpenAI
-  to keep every chat its users had deleted, because of a copyright case.
+In September 2026, 404 Media revealed that OpenAI pays hundreds of contractors to read
+real ChatGPT conversations and score the answers. A privacy filter runs first, and the
+company admits sensitive details get through. In March 2025 a contractor at a New South
+Wales government agency uploaded a spreadsheet to ChatGPT with the names, addresses,
+phone numbers and some health details of up to 3,000 flood victims. The agency took six
+months to tell them.
 
-Samsung learned this in 2023, when engineers pasted semiconductor source code into
-ChatGPT to debug it. The company banned the tool. Most firms never find out.
+In July 2025 more than 4,500 "shared" ChatGPT conversations turned up in Google
+results, some with personal details in them. For four months that year a US court also
+ordered OpenAI to keep every chat its users had deleted, because of a copyright case.
+Samsung caught its own engineers in 2023, pasting semiconductor source code into
+ChatGPT to debug it, and banned the tool. Most firms never notice.
 
 On 20 July 2026 the Singapore Government told all businesses using AI whose problem
-this is. Its new guidelines on personal data in generative AI say that the firm using
-an AI system bears "primary responsibility" for making sure it complies with the
-Personal Data Protection Act, whoever built or sold the system. The law itself is the
-same as it was last year. What the guidelines do is close off the two answers she
-might have given on Monday. She cannot say the rules for AI are not settled yet, and
-she cannot say the vendor told her it was compliant.
+this is. Its new guidelines on personal data in generative AI say the firm using an AI
+system bears "primary responsibility" for making sure it complies with the Personal
+Data Protection Act, whoever built or sold the system. The law itself hasn't changed
+since last year. What the guidelines do is rule out the two answers she might have
+given on Monday. She can't say the rules for AI aren't settled yet, and she can't say
+the vendor told her it was compliant.
 
-I think the government got this right. The vendor cannot know what you use the tool
-for, which data it should see, or who in your office may paste a statement into it.
-Only you know that, so only you can own it.
+I think the government got this right. The vendor can't know what you use the tool for,
+or who in your office may paste a statement into it. You're the only one who knows
+that, so it has to be yours to manage.
 
-For my clients, that responsibility splits into two very different jobs.
+For my clients, that means two quite different jobs.
 
-The first is the sales team on personal ChatGPT accounts, and it is the real exposure.
-The guidelines say a general "product improvement" line in a privacy policy does not
+The first is the sales team on personal ChatGPT accounts, and it's the real exposure.
+The guidelines say a general "product improvement" line in a privacy policy doesn't
 cover training on customer data, and a consumer account trains by default. The fix is
-a business account with training switched off, and a one-page rule on what staff may
-paste in. That is an afternoon's work, and it can be done before Monday.
+a business account with training switched off, plus a one-page rule on what staff may
+paste in. Both can be in place before Monday.
 
 The second is the agents doing back-office work, such as matching delivery orders to
-invoices, clearing reconciliation breaks and checking freight invoices against quotes. If an agent
-was built properly, little changes. It already reads the order system and nothing
-else, logs what it did, and stops at an unfamiliar counterparty. What is usually
-missing is the paperwork. A purpose statement, a named owner for the prompts and logs,
-and a record of the vendor's safeguards. That is a day's work, and it is the answer to
-question 7.
+invoices or checking freight invoices against quotes. If an agent was built properly,
+little changes. It already reads the order system and nothing else, and it keeps a log
+of what it did. What's usually missing is the paperwork, meaning a purpose statement, a
+named owner for the prompts and logs, and a record of the vendor's safeguards. Writing
+those up takes about a day, and together they answer question 7.
 
-My view is that these guidelines ask for nothing a properly built AI system does not
-already do. It reads only the data its job needs, it keeps a log, and it does not
-train on your customers' data. So if an AI vendor tells you the new guidelines are
-hard to meet, the problem is their product, and you should buy from someone else.
+My view is that these guidelines ask for nothing a properly built AI system doesn't
+already do. A good system only sees the data its job needs, and it doesn't train on
+your customers' data. So if an AI vendor tells you the new guidelines are hard to meet,
+the problem is their product, and I'd buy from someone else.
 
-The full list of obligations, and the four questions to ask any AI vendor, are in a
+The full list of obligations and the four questions to ask any AI vendor are in a
 two-page checklist. [Download it here](/insights/ai-and-personal-data-checklist).
 
 _Sources: Personal Data Protection Commission (PDPC), Singapore, Advisory Guidelines on
