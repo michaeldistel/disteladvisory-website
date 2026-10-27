@@ -1,10 +1,11 @@
-<svelte:head>
-	<title>Distel | Practical AI Transformation for SMEs</title>
-	<meta
-		name="description"
-		content="Distel is a Singapore team that designs, builds and runs practical AI workflows and software for growing businesses: AI workflow solutions, build and delivery, and technical advisory."
-	/>
-</svelte:head>
+<script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
+</script>
+
+<Seo
+	title="Distel | Practical AI Transformation for SMEs"
+	description="Distel is a Singapore team that designs, builds and runs practical AI workflows and software for growing businesses: AI workflow solutions, build and delivery, and technical advisory."
+/>
 
 <!-- Hero: base surface -->
 <section class="mx-auto max-w-5xl px-6 pb-6 pt-8 sm:pb-12 sm:pt-14">

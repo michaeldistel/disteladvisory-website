@@ -1,5 +1,13 @@
+<script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
+</script>
+
+<Seo
+	title="Privacy Policy | Distel"
+	description="How Distel Advisory collects, uses and protects personal data under Singapore's Personal Data Protection Act."
+/>
+
 <svelte:head>
-	<title>Privacy Policy | Distel</title>
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
