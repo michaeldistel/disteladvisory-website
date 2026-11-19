@@ -15,6 +15,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Organisation schema carries the founder and a Singapore address; sitemap lists published posts
 - Build and Delivery service page, linked from the navigation and the home page
 - Two posts dated 19 November 2026: AI and insecure APIs, and deepfake payment fraud, each linking the government advisories it cites
+- Post dated 19 November 2026 on AI voice agents for the out-of-hours phone line
 
 ### Changed
 
