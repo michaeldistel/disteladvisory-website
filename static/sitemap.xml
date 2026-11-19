@@ -43,6 +43,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://distel.sg/insights/ai-attacks-insecure-apis</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://distel.sg/insights/ai-voice-agent-out-of-hours-calls</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://distel.sg/insights/deepfake-payment-fraud</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://distel.sg/insights/pdpc-generative-ai-guidelines-deployers</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
