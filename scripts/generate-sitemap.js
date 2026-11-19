@@ -50,10 +50,10 @@ function hasNoindex(content) {
 function priorityForRoute(route) {
 	const priorities = new Map([
 		['/', '1.0'],
-
 		['/technical-advisory', '0.9'],
 		['/ai-transformation', '0.9'],
-		['/book', '0.8']
+		['/book', '0.8'],
+		['/insights', '0.8']
 	]);
 
 	return priorities.get(route) ?? '0.7';
@@ -107,6 +107,38 @@ async function lastModifiedForPage(pageFile) {
 	return toDateStamp(stats.mtime);
 }
 
+const insightsDir = path.join(projectRoot, 'src', 'content', 'insights');
+
+function frontmatterField(content, field) {
+	const match = content.match(new RegExp(`^${field}:\\s*"?([^"\\n]+)"?\\s*$`, 'm'));
+	return match ? match[1].trim() : null;
+}
+
+async function listPublishedPosts() {
+	let files = [];
+	try {
+		files = (await fs.readdir(insightsDir)).filter((name) => name.endsWith('.md'));
+	} catch {
+		return [];
+	}
+
+	const posts = [];
+	for (const name of files) {
+		const file = path.join(insightsDir, name);
+		const content = await fs.readFile(file, 'utf8');
+		if (frontmatterField(content, 'status') !== 'published') {
+			continue;
+		}
+
+		posts.push({
+			slug: frontmatterField(content, 'slug') ?? name.replace(/\.md$/, ''),
+			lastModified: await lastModifiedForPage(file)
+		});
+	}
+
+	return posts;
+}
+
 function toAbsoluteUrl(route) {
 	if (route === '/') {
 		return `${SITE_URL}/`;
@@ -135,6 +167,12 @@ async function generateSitemap() {
 		if (!existing || lastModified > existing) {
 			lastModifiedByRoute.set(route, lastModified);
 		}
+	}
+
+	// Insights posts are prerendered from markdown, not from a +page.svelte each,
+	// so list them from the content directory. Drafts never reach the sitemap.
+	for (const post of await listPublishedPosts()) {
+		lastModifiedByRoute.set(`/insights/${post.slug}`, post.lastModified);
 	}
 
 	const uniqueRoutes = [...lastModifiedByRoute.keys()].sort((a, b) => {

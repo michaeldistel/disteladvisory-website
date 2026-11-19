@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
 	import { buildServiceSchema, buildBreadcrumbSchema, serialise, SITE_URL } from '$lib/schema';
 
 	const serviceSchema = serialise(
@@ -19,12 +20,12 @@
 	);
 </script>
 
+<Seo
+	title="Technical Advisory for SMEs in Singapore | Distel"
+	description="Independent technical guidance for SME leaders in Singapore: architecture reviews, vendor evaluation, and engineering hiring, from a team led by a former VC and startup CTO."
+/>
+
 <svelte:head>
-	<title>Technical Advisory for SMEs in Singapore | Distel</title>
-	<meta
-		name="description"
-		content="Independent technical guidance for SME leaders in Singapore: architecture reviews, vendor evaluation, and engineering hiring, from a team led by a former VC and startup CTO."
-	/>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html `<script type="application/ld+json">${serviceSchema}</script>`}
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->

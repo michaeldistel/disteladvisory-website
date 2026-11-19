@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
 	import {
 		buildServiceSchema,
 		buildBreadcrumbSchema,
@@ -55,12 +56,12 @@
 	);
 </script>
 
+<Seo
+	title="AI Workflow Solutions for SMEs | Distel"
+	description="Practical AI workflow implementation for SMEs and mid-sized teams. Audit, prioritise, and build AI into daily operations, with clear ownership and measurable outcomes."
+/>
+
 <svelte:head>
-	<title>AI Workflow Solutions for SMEs | Distel</title>
-	<meta
-		name="description"
-		content="Practical AI workflow implementation for SMEs and mid-sized teams. Audit, prioritise, and build AI into daily operations, with clear ownership and measurable outcomes."
-	/>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html `<script type="application/ld+json">${serviceSchema}</script>`}
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->

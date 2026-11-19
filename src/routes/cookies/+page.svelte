@@ -1,5 +1,13 @@
+<script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
+</script>
+
+<Seo
+	title="Cookie Policy | Distel"
+	description="How distel.sg uses cookies and similar technologies, and how to control them."
+/>
+
 <svelte:head>
-	<title>Cookie Policy | Distel</title>
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
